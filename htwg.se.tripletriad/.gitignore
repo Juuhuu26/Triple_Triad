@@ -1,1 +1,9 @@
+# dirs
+
 /bin/
+/.settings/
+
+# files
+
+.classpath
+.project
