@@ -5,13 +5,16 @@ import java.util.ArrayList;
 
 public class Deck {
 	
+	CardCollection cardList = new CardCollection();
 	private List<Card> hand;
 	private static final int MAX_CARD = 5;
 	
 	public Deck(char c){
 		hand = new ArrayList<>();
 		for(int i = 0; i < MAX_CARD; i++){
-			hand.add(new Card("Nataniel", 9, 9, 2, 5, c));
+			Card card = cardList.pull();
+			card.setColor(c);
+			hand.add(card);
 		}
 	}
 	
@@ -29,5 +32,4 @@ public class Deck {
 		
 		return sb.toString();
 	}
-
 }

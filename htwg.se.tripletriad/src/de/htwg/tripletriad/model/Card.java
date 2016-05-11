@@ -6,14 +6,13 @@ public class Card {
 	private int up, down, left, right;
 	private char color;
 	
-	public Card(String name, int up, int down, int left, int right, char color) {
+	public Card(String name, int up, int down, int left, int right) {
 		
 		this.name = name;
 		this.up = up;
 		this.down = down;
 		this.left = left;
 		this.right = right;
-		this.color = color;
 	}
 	
 	public String getName() {
@@ -38,6 +37,10 @@ public class Card {
 	
 	public char getColor() {
 		return this.color;
+	}
+	
+	public void setColor(char c) {
+		this.color = c;
 	}
 
 	public void changeColor() {

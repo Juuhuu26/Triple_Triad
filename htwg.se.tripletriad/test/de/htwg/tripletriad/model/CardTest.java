@@ -11,9 +11,14 @@ public class CardTest {
 	
 	@Before
 	public void setCard() throws Exception {
-		card = new Card("Test", 1, 1, 1, 1, 'b');
+		card = new Card("Test", 1, 1, 1, 1);
 	}
 	
+	@Test 
+	public void testSetColor() {
+		card.setColor('b');
+		assertEquals('b', card.getColor());
+	}
 	@Test
 	public void testGetName() {
 		assertEquals("Test", card.getName());

@@ -21,7 +21,7 @@ public class DeckTest {
 		assertEquals(5, deck.getHand().size());
 	}
 
-	@Test
+	@Test	
 	public void testToString() {
 		assertEquals(deck.toString(), deck.toString());
 	}
