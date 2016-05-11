@@ -2,3 +2,8 @@
 
 .metadata/
 .recommenders/
+.sonar/
+
+# files
+
+sonar-project.properties
