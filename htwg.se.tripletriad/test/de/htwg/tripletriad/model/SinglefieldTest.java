@@ -24,7 +24,6 @@ public class SinglefieldTest {
 		assertEquals(2, field.getCard().getDown());
 		assertEquals(3, field.getCard().getLeft());
 		assertEquals(4, field.getCard().getRight());
-		assertEquals('b', field.getCard().getColor());
 	}
 	
 	@Test
