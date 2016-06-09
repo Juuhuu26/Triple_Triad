@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import de.htwg.se.tripletriad.model.Card;
+import de.htwg.se.tripletriad.model.Singlefield;
+
 public class SinglefieldTest {
 
 /* Fields */
