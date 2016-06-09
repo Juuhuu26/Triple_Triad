@@ -1,4 +1,4 @@
-package de.htwg.tripletriad.model;
+package de.htwg.se.tripletriad.model;
 
 import static org.junit.Assert.*;
 
