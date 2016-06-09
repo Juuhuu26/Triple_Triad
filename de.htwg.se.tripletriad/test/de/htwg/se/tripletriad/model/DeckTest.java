@@ -5,26 +5,28 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.htwg.se.tripletriad.model.Deck;
-
 public class DeckTest {
 
-	private Deck deck;
+    private Deck deck;
 
-/* Setup */
-	@Before
-	public void setUp() throws Exception {
-		deck = new Deck('b');
-	}
-	
-/* Test */
-	@Test
-	public void testGetHand() {
-		assertEquals(5, deck.getHand().size());
-	}
+    @Before
+    public void setUp() throws Exception {
+        deck = new Deck('b');
+    }
 
-	@Test	
-	public void testToString() {
-		assertEquals(deck.toString(), deck.toString());
-	}
+    @Test
+    public void testGetHand() {
+        assertEquals(5, deck.getHand().size());
+    }
+    
+    @Test
+    public void testRemoveCard() {
+        deck.removeCard(3);
+        assertEquals(deck.getHand().size(), 4);
+    }
+
+    @Test	
+    public void testToString() {
+        assertEquals(deck.toString(), deck.toString());
+    }
 }
