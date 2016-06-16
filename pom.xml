@@ -6,8 +6,8 @@
   <name>SE2016SS-05-TripleTriad</name>
   <description>A Triple Triad in Java for the lecture Software Engineering at HTWG Konstanz</description>
   <build>
-    <sourceDirectory>de.htwg.se.tripletriad/src</sourceDirectory>
-    <testSourceDirectory>de.htwg.se.tripletriad/test</testSourceDirectory>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
     <resources>
       <resource>
         <directory>src</directory>
