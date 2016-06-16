@@ -36,7 +36,7 @@ sourceSets {
 }
 
 jar {
-    manifest.attributes "Main-Class":"de.htwg.se.tripletriad/src/de.htwg.se.tripletriad.TripleTriad"
+    manifest.attributes "Main-Class":"de.htwg.se.tripletriad.TripleTriad"
 }
   
 sonarqube {
