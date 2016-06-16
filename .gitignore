@@ -7,8 +7,5 @@ bin/
 
 # files
 
-sonar-project.properties
-/bin/
-
 .classpath
 .project
