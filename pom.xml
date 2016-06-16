@@ -3,7 +3,7 @@
   <groupId>de.htwg.se.tripletriad</groupId>
   <artifactId>de.htwg.se.tripletriad</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Sudoku SE</name>
+  <name>SE2016SS-05-TripleTriad</name>
   <description>A Triple Triad in Java for the lecture Software Engineering at HTWG Konstanz</description>
   <build>
     <sourceDirectory>src</sourceDirectory>
