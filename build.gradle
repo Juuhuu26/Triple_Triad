@@ -31,8 +31,8 @@ dependencies {
 }
 
 sourceSets {
-    main.java.srcDir "de.htwg.se.tripletriad/src"
-    test.java.srcDir "de.htwg.se.tripletriad/test"
+    main.java.srcDir "src"
+    test.java.srcDir "test"
 }
 
 jar {
