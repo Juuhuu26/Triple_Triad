@@ -8,7 +8,6 @@ public class TripleTriadTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
 	}
 
 }
