@@ -6,19 +6,19 @@ public interface ISinglefield {
 	
 	/**
 	 * 
-	 * @param: 
+	 * sets the current card
 	 */
 	void setCard(Card card);
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns the current card 
 	 */
 	Card getCard();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns that the card is not disparate null
 	 */
 	boolean isBusy();
 	
