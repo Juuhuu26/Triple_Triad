@@ -69,6 +69,7 @@ public interface ITripleTriadController {
 	 * 
 	 * @param: 
 	 */
+	@Override
 	String toString();
 	
 }

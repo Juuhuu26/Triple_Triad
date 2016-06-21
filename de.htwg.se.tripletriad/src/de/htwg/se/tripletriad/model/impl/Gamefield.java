@@ -20,15 +20,18 @@ public class Gamefield implements IGamefield {
             }
         }
     }
-
+    
+    @Override
     public Singlefield[][] getField() {
         return this.field;
     }
 
+    @Override
     public Card getCardField(int x, int y) {
         return field[x][y].getCard();
     }
     
+    @Override
     public int setCardField(Card c, int pos){
 
         switch(pos) {
@@ -89,6 +92,7 @@ public class Gamefield implements IGamefield {
         return changes;
     }
 
+    @Override
     public void checkRight(Singlefield f, Card c) {
 
         Card c2;
@@ -99,6 +103,7 @@ public class Gamefield implements IGamefield {
         }
     }
 
+    @Override
     public void checkDown(Singlefield f, Card c) {
 
         Card c2;
@@ -119,6 +124,7 @@ public class Gamefield implements IGamefield {
         }
     }
 
+    @Override
     public void checkUp(Singlefield f, Card c) {
 
         Card c2;
@@ -129,6 +135,7 @@ public class Gamefield implements IGamefield {
         }
     }
 
+    @Override
     public boolean compareUp(Card c, Card c2){
 
         if(c.getColor() != c2.getColor() && c.getUp() > c2.getDown()){
@@ -138,6 +145,7 @@ public class Gamefield implements IGamefield {
         return false;
     }
 
+    @Override
     public boolean compareDown(Card c, Card c2){
 
         if(c.getColor() != c2.getColor() && c.getDown() > c2.getUp()){
@@ -147,6 +155,7 @@ public class Gamefield implements IGamefield {
         return false;
     }
 
+    @Override
     public boolean compareLeft(Card c, Card c2){
 
         if(c.getColor() != c2.getColor() && c.getLeft() > c2.getRight()){
@@ -156,6 +165,7 @@ public class Gamefield implements IGamefield {
         return false;
     }
 
+    @Override
     public boolean compareRight(Card c, Card c2){
 
         if(c.getColor() != c2.getColor() && c.getRight() > c2.getLeft()){
@@ -165,6 +175,7 @@ public class Gamefield implements IGamefield {
         return false;
     }
 
+    @Override
     public String lineOne(Card c1, Card c2, Card c3){
 
         StringBuilder sb = new StringBuilder();
@@ -183,6 +194,7 @@ public class Gamefield implements IGamefield {
         return sb.toString();
     }
 
+    @Override
     public String lineTwo(Card c1, Card c2, Card c3){
 
         StringBuilder sb = new StringBuilder();
@@ -201,6 +213,7 @@ public class Gamefield implements IGamefield {
         return sb.toString();
     }
 
+    @Override
     public String lineThree(Card c1, Card c2, Card c3){
 
         StringBuilder sb = new StringBuilder();

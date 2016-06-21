@@ -10,14 +10,17 @@ public class Singlefield implements ISinglefield {
        this.card = null;
     }
 
+    @Override
     public void setCard(Card card) {
         this.card = card;
     }
 
+    @Override
     public Card getCard() {
         return this.card;
     }
 
+    @Override
     public boolean isBusy(){
         return card != null;
     }

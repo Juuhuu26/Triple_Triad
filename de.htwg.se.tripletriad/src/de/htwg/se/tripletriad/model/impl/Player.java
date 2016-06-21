@@ -18,26 +18,32 @@ public class Player implements IPlayer {
 		point = START_POINTS;
 	}
 	
+	@Override
 	public String getName(){
 		return name;
 	}	
 	
+	@Override
 	public char getColor(){
 		return color;
 	}
 	
+	@Override
 	public Deck getDeck(){
 		return hand;
 	}
 
+	@Override
 	public int increasePoint(){
 		return point++;
 	}
 	
+	@Override
 	public int decreasePoint(){
 		return point--;
 	}
 	
+	@Override
 	public int getTotalPoint(){
 		return point;
 	}
