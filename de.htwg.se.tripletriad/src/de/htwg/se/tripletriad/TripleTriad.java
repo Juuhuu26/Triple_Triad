@@ -12,7 +12,9 @@ public class TripleTriad {
 	private static TripleTriadController controller;
 
 	/* Constructor */
-	private TripleTriad(){}
+	private TripleTriad() { 
+		
+	}
 
 	/* Methods */
 	public static void main(String[] args) {
