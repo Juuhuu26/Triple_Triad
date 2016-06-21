@@ -64,5 +64,6 @@ public interface ICard {
     /**
      * @return Card as String
      */
+    @Override
     String toString();
 }

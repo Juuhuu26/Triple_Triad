@@ -17,26 +17,32 @@ public class Card implements ICard{
         this.right = right;
     }
     
+    @Override
     public String getName() {
         return this.name;
     }
     
+    @Override
     public int getUp() {
         return this.up;
 	}
     
+    @Override
     public int getDown() {
         return this.down;
     }
     
+    @Override
     public int getLeft() {
         return this.left;
     }
     
+    @Override
     public int getRight() {
         return this.right;
     }
     
+    @Override
     public char getColor() {
         return this.color;
     }
@@ -45,6 +51,7 @@ public class Card implements ICard{
         this.color = c;
     }
     
+    @Override
     public void changeColor() {
         
         if(this.color == 'r')

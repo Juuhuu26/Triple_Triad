@@ -7,31 +7,31 @@ public interface ITripleTriadController {
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns the current player 
 	 */
 	Player getPlayer();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns player one with allocated color blue 
 	 */
 	Player getPlayer1();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns player two with allocated color red 
 	 */
 	Player getPlayer2();
 	
 	/**
 	 * 
-	 * @param: 
+	 * sets player x as current player
 	 */
 	void setPlayer();
 	
 	/**
 	 * 
-	 * @param: 
+	 * the method switchP switches between the two players
 	 */
 	void switchP();
 	

@@ -20,10 +20,12 @@ public class Deck implements IDeck{
         }
     }
 
+    @Override
     public List<Card> getHand(){
         return hand;
     }
     
+    @Override
     public void removeCard(int x) {
         hand.remove(x);
     }

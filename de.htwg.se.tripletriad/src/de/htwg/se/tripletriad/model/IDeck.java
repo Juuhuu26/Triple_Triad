@@ -28,5 +28,6 @@ public interface IDeck {
     /**
      * Get player's hand as String
      */
+    @Override
     String toString();
 }
