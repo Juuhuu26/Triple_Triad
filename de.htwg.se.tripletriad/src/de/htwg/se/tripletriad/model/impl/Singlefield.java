@@ -1,6 +1,8 @@
-package de.htwg.se.tripletriad.model;
+package de.htwg.se.tripletriad.model.impl;
 
-public class Singlefield {
+import de.htwg.se.tripletriad.model.ISinglefield;
+
+public class Singlefield implements ISinglefield {
 
     private Card card;
 

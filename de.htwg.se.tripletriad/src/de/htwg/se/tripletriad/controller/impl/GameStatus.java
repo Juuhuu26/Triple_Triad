@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package de.htwg.se.tripletriad.controller;
+package de.htwg.se.tripletriad.controller.impl;
 
 public enum GameStatus {
     WELCOME,

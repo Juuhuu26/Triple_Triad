@@ -1,7 +1,7 @@
-package de.htwg.se.tripletriad.controller;
+package de.htwg.se.tripletriad.controller.impl;
 
-import de.htwg.se.tripletriad.model.*;
-import de.htwg.se.util.observer.Observable;
+import de.htwg.se.tripletriad.model.impl.*;
+import de.htwg.se.tripletriad.util.observer.Observable;
 
 import java.util.List;
 import java.util.ArrayList;

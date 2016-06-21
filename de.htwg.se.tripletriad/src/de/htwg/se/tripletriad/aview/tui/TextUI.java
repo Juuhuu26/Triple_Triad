@@ -3,9 +3,9 @@ package de.htwg.se.tripletriad.aview.tui;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import de.htwg.se.tripletriad.controller.TripleTriadController;
-import de.htwg.se.util.observer.Event;
-import de.htwg.se.util.observer.IObserver;
+import de.htwg.se.tripletriad.controller.impl.TripleTriadController;
+import de.htwg.se.tripletriad.util.observer.Event;
+import de.htwg.se.tripletriad.util.observer.IObserver;
 
 public class TextUI implements IObserver{
 

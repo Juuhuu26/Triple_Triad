@@ -1,6 +1,8 @@
-package de.htwg.se.tripletriad.model;
+package de.htwg.se.tripletriad.model.impl;
 
-public class Player {
+import de.htwg.se.tripletriad.model.IPlayer;
+
+public class Player implements IPlayer {
 	
 	private String name;
 	private char color;
@@ -29,11 +31,11 @@ public class Player {
 	}
 
 	public int increasePoint(){
-		return point++;
+		return ++point;
 	}
 	
 	public int decreasePoint(){
-		return point--;
+		return --point;
 	}
 	
 	public int getTotalPoint(){

@@ -1,4 +1,4 @@
-package de.htwg.se.tripletriad.model;
+package de.htwg.se.tripletriad.model.impl;
 
 import java.util.List;
 import java.util.ArrayList;

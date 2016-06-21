@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import de.htwg.se.tripletriad.model.impl.Card;
+import de.htwg.se.tripletriad.model.impl.Gamefield;
+
 public class GamefieldTest {
     
     private Gamefield gamefield;

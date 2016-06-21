@@ -1,6 +1,8 @@
-package de.htwg.se.tripletriad.model;
+package de.htwg.se.tripletriad.model.impl;
 
-public class Gamefield {
+import de.htwg.se.tripletriad.model.IGamefield;
+
+public class Gamefield implements IGamefield {
 
     private static final int HEIGHT = 3;
     private static final int WIDTH = 3;
@@ -20,7 +22,6 @@ public class Gamefield {
     }
 
     public Singlefield[][] getField() {
-
         return this.field;
     }
 
@@ -88,7 +89,7 @@ public class Gamefield {
         return changes;
     }
 
-    private void checkRight(Singlefield f, Card c) {
+    public void checkRight(Singlefield f, Card c) {
 
         Card c2;
         if(f.isBusy()){
@@ -98,7 +99,7 @@ public class Gamefield {
         }
     }
 
-    private void checkDown(Singlefield f, Card c) {
+    public void checkDown(Singlefield f, Card c) {
 
         Card c2;
         if(f.isBusy()){
@@ -108,7 +109,7 @@ public class Gamefield {
         }
     }
 
-    private void checkLeft(Singlefield f, Card c) {
+    public void checkLeft(Singlefield f, Card c) {
 
         Card c2;
         if(f.isBusy()){
@@ -118,7 +119,7 @@ public class Gamefield {
         }
     }
 
-    private void checkUp(Singlefield f, Card c) {
+    public void checkUp(Singlefield f, Card c) {
 
         Card c2;
         if(f.isBusy()){
@@ -128,7 +129,7 @@ public class Gamefield {
         }
     }
 
-    private static boolean compareUp(Card c, Card c2){
+    public boolean compareUp(Card c, Card c2){
 
         if(c.getColor() != c2.getColor() && c.getUp() > c2.getDown()){
             c2.changeColor();
@@ -137,7 +138,7 @@ public class Gamefield {
         return false;
     }
 
-    private static boolean compareDown(Card c, Card c2){
+    public boolean compareDown(Card c, Card c2){
 
         if(c.getColor() != c2.getColor() && c.getDown() > c2.getUp()){
             c2.changeColor();
@@ -146,7 +147,7 @@ public class Gamefield {
         return false;
     }
 
-    private static boolean compareLeft(Card c, Card c2){
+    public boolean compareLeft(Card c, Card c2){
 
         if(c.getColor() != c2.getColor() && c.getLeft() > c2.getRight()){
             c2.changeColor();
@@ -155,7 +156,7 @@ public class Gamefield {
         return false;
     }
 
-    private static boolean compareRight(Card c, Card c2){
+    public boolean compareRight(Card c, Card c2){
 
         if(c.getColor() != c2.getColor() && c.getRight() > c2.getLeft()){
             c2.changeColor();
@@ -164,7 +165,7 @@ public class Gamefield {
         return false;
     }
 
-    private static String lineOne(Card c1, Card c2, Card c3){
+    public String lineOne(Card c1, Card c2, Card c3){
 
         StringBuilder sb = new StringBuilder();
         if(c1 != null)
@@ -182,7 +183,7 @@ public class Gamefield {
         return sb.toString();
     }
 
-    private static String lineTwo(Card c1, Card c2, Card c3){
+    public String lineTwo(Card c1, Card c2, Card c3){
 
         StringBuilder sb = new StringBuilder();
         if(c1 != null)
@@ -200,7 +201,7 @@ public class Gamefield {
         return sb.toString();
     }
 
-    private static String lineThree(Card c1, Card c2, Card c3){
+    public String lineThree(Card c1, Card c2, Card c3){
 
         StringBuilder sb = new StringBuilder();
         if(c1 != null)

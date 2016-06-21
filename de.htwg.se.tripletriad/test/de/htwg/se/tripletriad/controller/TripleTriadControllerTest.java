@@ -5,6 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import de.htwg.se.tripletriad.controller.impl.GameStatus;
+import de.htwg.se.tripletriad.controller.impl.TripleTriadController;
+
 public class TripleTriadControllerTest {
 
     TripleTriadController controller;

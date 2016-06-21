@@ -1,4 +1,4 @@
-package de.htwg.se.util.observer;
+package de.htwg.se.tripletriad.util.observer;
 
 import java.util.ArrayList;
 import java.util.List;

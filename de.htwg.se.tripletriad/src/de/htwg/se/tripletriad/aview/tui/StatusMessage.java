@@ -2,7 +2,7 @@ package de.htwg.se.tripletriad.aview.tui;
 
 import java.util.*;
 
-import de.htwg.se.tripletriad.controller.GameStatus;
+import de.htwg.se.tripletriad.controller.impl.GameStatus;
 
 public class StatusMessage  {
 	

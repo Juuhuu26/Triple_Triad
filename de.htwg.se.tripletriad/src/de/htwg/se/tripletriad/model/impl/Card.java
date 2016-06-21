@@ -1,4 +1,4 @@
-package de.htwg.se.tripletriad.model;
+package de.htwg.se.tripletriad.model.impl;
 
 public class Card {
 

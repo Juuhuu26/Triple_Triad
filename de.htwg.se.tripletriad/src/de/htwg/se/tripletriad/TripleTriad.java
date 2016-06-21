@@ -3,7 +3,7 @@ package de.htwg.se.tripletriad;
 import java.util.Scanner;
 
 import de.htwg.se.tripletriad.aview.tui.*;
-import de.htwg.se.tripletriad.controller.*;
+import de.htwg.se.tripletriad.controller.impl.*;
 
 public class TripleTriad {
 		

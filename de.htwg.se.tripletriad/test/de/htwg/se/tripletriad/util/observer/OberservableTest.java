@@ -1,4 +1,4 @@
-package de.htwg.se.util.observer;
+package de.htwg.se.tripletriad.util.observer;
 
 
 import static org.junit.Assert.*;
@@ -6,9 +6,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.htwg.se.util.observer.Event;
-import de.htwg.se.util.observer.IObserver;
-import de.htwg.se.util.observer.Observable;
+import de.htwg.se.tripletriad.util.observer.Event;
+import de.htwg.se.tripletriad.util.observer.IObserver;
+import de.htwg.se.tripletriad.util.observer.Observable;
 
 public class OberservableTest {
 

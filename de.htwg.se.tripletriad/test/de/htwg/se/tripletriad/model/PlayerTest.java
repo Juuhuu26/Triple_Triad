@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import de.htwg.se.tripletriad.model.Player;
+import de.htwg.se.tripletriad.model.impl.Player;
 
 import org.junit.Before;
 
