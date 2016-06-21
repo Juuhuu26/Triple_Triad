@@ -77,25 +77,25 @@ public interface IGamefield {
 	
 	/**
 	 * 
-	 * @param: 
+	 * prints Card c, Card c2 and Card 3 with position one, two and three to console 
 	 */
 	String lineOne(Card c, Card c2, Card c3);
 	
 	/**
 	 * 
-	 * @param: 
+	 * prints Card c, Card c2 and Card 3 with position four, five and six to console
 	 */
 	String lineTwo(Card c, Card c2, Card c3);
 	
 	/**
 	 * 
-	 * @param: 
+	 * prints Card c, Card c2 and Card 3 with position seven, eight and nine to console
 	 */
 	String lineThree(Card c, Card c2, Card c3);
 	
 	/**
 	 * 
-	 * @param: 
+	 * prints methods lineOne, lineTwo and lineThree with delimiters 
 	 */
 	@Override
 	String toString();
