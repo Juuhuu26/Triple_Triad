@@ -5,37 +5,37 @@ public interface IPlayer {
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns the player's name
 	 */
 	String getName();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns the player's color
 	 */
 	char getColor();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns the player's current deck, consists of maximum five cards
 	 */
 	Deck getDeck();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: increases the player's entire point value by one, after a winning process
 	 */
 	int increasePoint();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: decreases the player's entire point value by one, after a losing process
 	 */
 	int decreasePoint();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @param: returns the player's current point value
 	 */
 	int getTotalPoint();
 	
