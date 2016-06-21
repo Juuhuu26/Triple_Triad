@@ -7,67 +7,71 @@ public interface IGamefield {
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns the current field of type Singlefield
 	 */
 	Singlefield[][] getField();
 	
 	/**
 	 * 
-	 * @param: 
+	 * @return: returns the current card on a field x, y 
 	 */
 	Card getCardField(int x, int y);
 	
 	/**
 	 * 
-	 * @param: 
+	 * places a card with values from one to nine on a field x, y
 	 */
 	int setCardField(Card c, int pos);
 	
 	/**
 	 * 
-	 * @param: 
+	 * checks whether Singlefield f is empty, if not - it compares Card c with Card c2 
 	 */
 	void checkRight(Singlefield f, Card c);
 	
 	/**
 	 * 
-	 * @param: 
+	 * checks whether Singlefield f is empty, if not - it compares Card c with Card c2 
 	 */
 	void checkDown(Singlefield f, Card c);
 	
 	/**
 	 * 
-	 * @param: 
+	 * checks whether Singlefield f is empty, if not - it compares Card c with Card c2  
 	 */
 	void checkLeft(Singlefield f, Card c);
 	
 	/**
 	 * 
-	 * @param: 
+	 * checks whether Singlefield f is empty, if not - it compares Card c with Card c2  
 	 */
 	void checkUp(Singlefield f, Card c);
 	
 	/**
 	 * 
-	 * @param: 
+	 * compares Card c color with Card c2 color, compares Card c up value with Card c2 down value, 
+	 * then changes the winning card's color
 	 */
 	boolean compareUp(Card c, Card c2);
 	
 	/**
 	 * 
-	 * @param: 
+	 * compares Card c color with Card c2 color, compares Card c down value with Card c2 up value, 
+	 * then the method changes the winning card's color 
 	 */
 	boolean compareDown(Card c, Card c2);
 	
 	/**
 	 * 
-	 * @param: 
+	 * compares Card c color with Card c2 color, compares Card c left value with Card c2 right value, 
+	 * then the method changes the winning card's color 
 	 */
 	boolean compareLeft(Card c, Card c2);
 	
 	/**
 	 * 
-	 * @param: 
+	 * compares Card c color with Card c2 color, compares Card c right value with Card c2 left value, 
+	 * then the method changes the winning card's color
 	 */
 	boolean compareRight(Card c, Card c2);
 	
