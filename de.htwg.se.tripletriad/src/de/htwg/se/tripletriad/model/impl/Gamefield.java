@@ -114,6 +114,7 @@ public class Gamefield implements IGamefield {
         }
     }
 
+    @Override
     public void checkLeft(Singlefield f, Card c) {
 
         Card c2;

@@ -24,6 +24,7 @@ public class CardCollection {
     this.list.add(new Card("Chocobo", 1, 7, 1, 4));
 
     Collections.shuffle(list);
+    
     }
     
     public Card pull() {

@@ -47,6 +47,7 @@ public class Card implements ICard{
         return this.color;
     }
     
+    @Override
     public void setColor(char c) {
         this.color = c;
     }
