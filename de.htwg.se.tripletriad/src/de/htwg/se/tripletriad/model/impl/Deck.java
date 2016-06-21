@@ -1,9 +1,11 @@
 package de.htwg.se.tripletriad.model.impl;
 
+import de.htwg.se.tripletriad.model.IDeck;
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class Deck {
+public class Deck implements IDeck{
 
     CardCollection cardList = new CardCollection();
     private List<Card> hand;

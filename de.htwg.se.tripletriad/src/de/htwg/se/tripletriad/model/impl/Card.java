@@ -1,6 +1,8 @@
 package de.htwg.se.tripletriad.model.impl;
 
-public class Card {
+import de.htwg.se.tripletriad.model.ICard;
+
+public class Card implements ICard{
 
     private String name;
     private int up, down, left, right;
