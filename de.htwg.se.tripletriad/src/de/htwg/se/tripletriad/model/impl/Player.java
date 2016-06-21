@@ -31,11 +31,13 @@ public class Player implements IPlayer {
 	}
 
 	public int increasePoint(){
-		return ++point;
+		++point;
+		return point;
 	}
 	
 	public int decreasePoint(){
-		return --point;
+		--point;
+		return point;
 	}
 	
 	public int getTotalPoint(){
