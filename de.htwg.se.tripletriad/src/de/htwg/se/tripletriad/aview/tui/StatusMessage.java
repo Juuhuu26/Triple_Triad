@@ -6,7 +6,7 @@ import de.htwg.se.tripletriad.controller.impl.GameStatus;
 
 public class StatusMessage  {
 	
-	static Hashtable<GameStatus, String> textSeMe = new Hashtable<GameStatus, String>();
+	static Map<GameStatus, String> textSeMe = new Hashtable<GameStatus, String>();
 	
 	public StatusMessage(){
 		textSeMe.put(GameStatus.WELCOME, "Triple Triad");
