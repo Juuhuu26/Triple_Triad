@@ -2,10 +2,11 @@ package de.htwg.se.tripletriad.model.impl;
 
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 public class CardCollection {
 	
-    private LinkedList<Card> list = new LinkedList<Card>();
+    private List<Card> list = new LinkedList<Card>();
 
     public CardCollection() {
     	
@@ -28,6 +29,6 @@ public class CardCollection {
     }
     
     public Card pull() {
-    	return this.list.poll();
+    	return ((LinkedList<Card>) this.list).poll();
     }
 }
