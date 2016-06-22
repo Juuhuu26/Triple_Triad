@@ -34,13 +34,11 @@ public class PlayerTest {
 	
 	@Test
 	public void testIncreasePoint() {
-		player.increasePoint();
 		assertEquals(6, player.increasePoint());
 	}
 	
 	@Test
 	public void testDecreasePoint() {
-		player.decreasePoint();
 		assertEquals(4, player.decreasePoint());
 	}
 
