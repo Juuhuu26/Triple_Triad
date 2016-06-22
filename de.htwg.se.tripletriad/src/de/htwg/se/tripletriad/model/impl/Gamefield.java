@@ -33,7 +33,7 @@ public class Gamefield implements IGamefield {
     
     @Override
     public int setCardField(Card c, int pos){
-
+    	changes = 0;
         switch(pos) {
         case 1:
             field[0][0].setCard(c);

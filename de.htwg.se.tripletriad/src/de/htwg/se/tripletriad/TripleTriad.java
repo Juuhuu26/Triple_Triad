@@ -33,6 +33,8 @@ public class TripleTriad {
 	    while (continu) {
 
 	        continu = tui.processInputLine(scanner.next());
+	        System.out.println("Score:\nPlayer 1:\t"+controller.getPlayer1().getTotalPoint());
+		    System.out.println("Player 2:\t"+controller.getPlayer2().getTotalPoint());
 	    }
 	    System.out.println("FINAL BOARD\n" + controller.toString());
 	    System.out.println("Score:\nPlayer 1:\t"+controller.getPlayer1().getTotalPoint());

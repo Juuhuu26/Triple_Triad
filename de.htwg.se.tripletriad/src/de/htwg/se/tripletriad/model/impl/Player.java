@@ -35,12 +35,12 @@ public class Player implements IPlayer {
 
 	@Override
 	public int increasePoint(){
-		return point++;
+		return ++point;
 	}
 	
 	@Override
 	public int decreasePoint(){
-		return point--;
+		return --point;
 	}
 	
 	@Override

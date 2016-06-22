@@ -28,7 +28,7 @@ public class TextUI implements IObserver{
         if (line.startsWith("q")) {
             continu = false;
         } else
-            if (line.matches("[0-4][1-9]")) {
+            if (line.matches("[1-5][1-9]")) {
                 int[] arg = readToArray(line);
                 continu = controller.setCard(arg[0]-1, arg[1]);
             } else {
