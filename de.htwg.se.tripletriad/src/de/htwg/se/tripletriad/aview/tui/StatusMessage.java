@@ -6,9 +6,9 @@ import de.htwg.se.tripletriad.controller.impl.GameStatus;
 
 public class StatusMessage  {
 	
-	static Map<GameStatus, String> textSeMe = new Hashtable<GameStatus, String>();
+	static Map<GameStatus, String> textSeMe = new HashMap<GameStatus, String>();
 	
-	public StatusMessage(){
+	private StatusMessage(){
 		textSeMe.put(GameStatus.WELCOME, "Triple Triad");
 		textSeMe.put(GameStatus.CARD_SET, "Set Card succeed");
 		textSeMe.put(GameStatus.ILLEGAL_CARD,"Card out of range");

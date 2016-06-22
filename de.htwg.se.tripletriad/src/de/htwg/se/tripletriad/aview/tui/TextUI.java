@@ -50,7 +50,7 @@ public class TextUI implements IObserver{
 
     public void printTUI() {
         System.out.println(NEWLINE + controller.toString());
-        System.out.println(NEWLINE + StatusMessage.textSeMe.get(controller.getStatus()) + controller.getStatusText());
+        System.out.println(NEWLINE + controller.getStatusText());
         System.out.println(NEWLINE + controller.getPlayer().getName() + " your turn");
         System.out.println(NEWLINE + "First choose a Card, then a Slot 1-9");
         System.out.println(NEWLINE + controller.getPlayer().getDeck().toString());
