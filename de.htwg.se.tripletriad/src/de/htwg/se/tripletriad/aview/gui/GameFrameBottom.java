@@ -5,7 +5,6 @@ import java.awt.ComponentOrientation;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import de.htwg.se.tripletriad.aview.gui.GraphicalUI;
 import de.htwg.se.tripletriad.util.singleton.SingleObject;
 
 import javax.swing.BorderFactory;

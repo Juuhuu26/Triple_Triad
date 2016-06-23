@@ -1,8 +1,7 @@
 package de.htwg.se.tripletriad.aview.gui;
 
-import java.awt.Font;
-import de.htwg.se.tripletriad.aview.gui.GraphicalUI;
 
+import de.htwg.se.tripletriad.aview.gui.GraphicalUI;
 import javax.swing.BorderFactory;
 import javax.swing.JTextArea;
 

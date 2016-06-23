@@ -6,7 +6,7 @@ public class BuildGameFrame {
 	
 	static Font f = new Font("HelveticaNeue", Font.PLAIN, 15);
 	
-	public BuildGameFrame() {
+	private BuildGameFrame() {
 		GameFrameTop.buildTop();
 		GameFrameBottom.buildBottom();
 		GameFrameLeft.buildLeft();
