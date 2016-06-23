@@ -47,8 +47,10 @@ public class TextUI implements IObserver{
         }
         return result;
     }
-
+    
     public void printTUI() {
+    	
+        System.out.println("");
         System.out.println(NEWLINE + controller.toString());
         System.out.println(NEWLINE + controller.getStatusText());
         System.out.println(NEWLINE + controller.getPlayer().getName() + " your turn");

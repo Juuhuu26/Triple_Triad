@@ -41,6 +41,8 @@ public interface ITripleTriadController {
 	 */
 	void updateStatus();
 	
+	void getElapsedTime();
+	
 	/**
 	 * 
 	 * @param: 

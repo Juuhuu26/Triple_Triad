@@ -32,7 +32,7 @@ public class Deck implements IDeck{
 
     @Override
     public String toString(){
-        StringBuilder sb = new StringBuilder("Order of Values is: Up, Down, Left, Right\n");
+        StringBuilder sb = new StringBuilder("Order of Values is: Up, Down, Left, Right\n\n");
         for(int i = 0; i < this.hand.size(); i++){
             sb.append(i + 1).append(") ").append(hand.get(i).toString());
             sb.append("\n");
