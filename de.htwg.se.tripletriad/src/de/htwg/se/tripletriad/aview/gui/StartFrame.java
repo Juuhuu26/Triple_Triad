@@ -1,12 +1,16 @@
 package de.htwg.se.tripletriad.aview.gui;
 
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
-import de.htwg.se.tripletriad.util.singleton.*;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+import de.htwg.se.tripletriad.util.collection.Collection;
 
 public class StartFrame implements ActionListener {
 	
@@ -15,17 +19,15 @@ public class StartFrame implements ActionListener {
 	JButton aboutButton;
 	JButton quitButton;
 	JFrame aboutFrame;
-	JFrame modeFrame;
-	Font f = new Font("HelveticaNeue", Font.PLAIN, 15);
 	
 	public StartFrame() {
 		mainFrame = new JFrame();
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.setLayout(new BoxLayout(mainFrame.getContentPane(), BoxLayout.Y_AXIS));
-		mainFrame.setFont(f);
+		mainFrame.setFont(Collection.MAIN_FONT);
 		
 		JPanel jP = new JPanel();
-		jP.setBackground(Color.GRAY);
+		jP.setBackground(Collection.MENU_GAME_BACKGROUND_COLOR);
 		
 		startButton = new JButton("Start Game");
 		startButton.addActionListener(this);
@@ -43,7 +45,7 @@ public class StartFrame implements ActionListener {
 		jP.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 		
 		mainFrame.add(jP);
-		mainFrame.setPreferredSize(new Dimension(200,200));
+		mainFrame.setPreferredSize(new Dimension(Collection.MENU_FRAME_WIDTH, Collection.MENU_FRAME_HEIGHT));
 		mainFrame.pack();
 		mainFrame.setVisible(true);
 		mainFrame.setResizable(false);
@@ -51,19 +53,19 @@ public class StartFrame implements ActionListener {
 	
 	public void aboutFrame() {
 		
-		modeFrame = new JFrame();
-		modeFrame.setTitle("About");
-		modeFrame.setSize(480, 300);
-		SingleObject object = SingleObject.getInstanceAbout();
+		aboutFrame = new JFrame();
+		aboutFrame.setTitle("About");
+		aboutFrame.setSize(Collection.ABOUT_FRAME_WIDTH, Collection.ABOUT_FRAME_HEIGHT);
 		
-		JTextArea label = new JTextArea(object.showMessageAbout());
-		label.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 40));
+		JTextArea label = new JTextArea("Triple Triad is a card game from Final Fantasy."
+				+ "\nIt was created for the lesson Software Engineering.");
+		label.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 		label.setEditable(false);
-		label.setBackground(new Color(107, 106, 104));
-		label.setForeground(Color.WHITE);
+		label.setBackground(Collection.MENU_GAME_BACKGROUND_COLOR);
+		label.setForeground(Collection.FONT_COLOR_WHITE);
 		
-		modeFrame.add(label);
-		modeFrame.setVisible(true);
+		aboutFrame.add(label);
+		aboutFrame.setVisible(true);
 	}
 	
 	@Override

@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 import de.htwg.se.tripletriad.controller.impl.TripleTriadController;
 import de.htwg.se.tripletriad.util.observer.Event;
 import de.htwg.se.tripletriad.util.observer.IObserver;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -52,11 +53,11 @@ public class TextUI implements IObserver{
     
     public void printTUI() {
     	
-        log4j.info(NEWLINE + controller.toString());
-        log4j.info(NEWLINE + controller.getStatusText());
-        log4j.info(NEWLINE + controller.getPlayer().getName() + " your turn");
-        log4j.info(NEWLINE + "First choose a Card, then a Slot 1-9");
-        log4j.info(NEWLINE + controller.getPlayer().getDeck().toString());
+	    log4j.info(NEWLINE + controller.toString());
+	    log4j.info(NEWLINE + controller.getStatusText());
+	    log4j.info(NEWLINE + controller.getPlayer().getName() + " your turn");
+	    log4j.info(NEWLINE + "First choose a Card, then a Slot 1-9");
+	    log4j.info(NEWLINE + controller.getPlayer().getDeck().toString());
     }
 }
 

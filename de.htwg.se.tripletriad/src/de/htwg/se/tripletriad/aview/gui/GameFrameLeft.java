@@ -1,22 +1,20 @@
 package de.htwg.se.tripletriad.aview.gui;
 
-import java.awt.Color;
-import java.awt.Font;
 import de.htwg.se.tripletriad.aview.gui.GraphicalUI;
+import de.htwg.se.tripletriad.util.collection.Collection;
+
 import javax.swing.BorderFactory;
 import javax.swing.JTextArea;
 
 public class GameFrameLeft {
 	
-	static Font f = new Font("HelveticaNeue", Font.PLAIN, 13);
-	
 	public static JTextArea buildLeft() {
 		
 		JTextArea pageLeft = new JTextArea(GraphicalUI.controller2.getPlayer1().getName() + 
 				"\n------------ \nDeck:\n\n" + GraphicalUI.controller2.getPlayer1().getDeck().toString());
-		pageLeft.setBackground(Color.LIGHT_GRAY);
-	    pageLeft.setForeground(Color.BLACK);
-	    pageLeft.setFont(f);
+		pageLeft.setBackground(Collection.GAME_SIDEBAR_BACKGROUND_COLOR);
+	    pageLeft.setForeground(Collection.FONT_COLOR_BLACK);
+	    pageLeft.setFont(Collection.SIDEBAR_FONT);
 	    pageLeft.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 	    pageLeft.setEditable(false);
 	    return pageLeft;

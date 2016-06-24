@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import de.htwg.se.tripletriad.controller.impl.TripleTriadController;
+import de.htwg.se.tripletriad.util.collection.Collection;
 import de.htwg.se.tripletriad.util.observer.Event;
 import de.htwg.se.tripletriad.util.observer.IObserver;
 
@@ -23,7 +24,7 @@ public class GraphicalUI implements IObserver {
 		frame.getContentPane().add(GameFrameLeft.buildLeft(), BorderLayout.LINE_START);
 		frame.getContentPane().add(GameFrameRight.buildRight(), BorderLayout.LINE_END);
 							
-		frame.setPreferredSize(new Dimension(1000,700));
+		frame.setPreferredSize(new Dimension(Collection.GAME_FRAME_WIDTH, Collection.GAME_FRAME_HEIGHT));
 		frame.pack();
 		frame.setVisible(true);
 		frame.setResizable(false);	

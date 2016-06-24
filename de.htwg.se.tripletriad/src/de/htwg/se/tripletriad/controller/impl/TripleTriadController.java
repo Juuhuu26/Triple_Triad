@@ -1,6 +1,7 @@
 package de.htwg.se.tripletriad.controller.impl;
 
 import de.htwg.se.tripletriad.model.impl.*;
+import de.htwg.se.tripletriad.util.collection.Collection;
 import de.htwg.se.tripletriad.util.observer.Observable;
 
 import java.util.List;
@@ -17,7 +18,6 @@ public class TripleTriadController extends Observable {
 	private Player playerRed;
 	private Player currentP;
 	
-	private static final int MAX_ACTIONS = 9;
 	private int counter = 0;
 	
 	public TripleTriadController(){
@@ -77,7 +77,7 @@ public class TripleTriadController extends Observable {
 					counter++;										
 				}
 				
-				if(counter == MAX_ACTIONS)
+				if(counter == Collection.MAX_ACTIONS)
 					return false;
 			}
 		} catch(IllegalArgumentException e){
