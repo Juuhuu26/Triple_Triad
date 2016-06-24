@@ -41,7 +41,7 @@ public class TripleTriadControllerTest {
     public void testGetStatusText() {
         controller.getStatusText();
     }
-    
+
     @Test
     public void testToString() {
         controller.toString();

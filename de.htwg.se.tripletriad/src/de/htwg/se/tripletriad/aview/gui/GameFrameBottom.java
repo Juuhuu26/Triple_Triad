@@ -23,7 +23,7 @@ public class GameFrameBottom implements ActionListener {
 	
 		pageBottom = new JTextField(object.showMessage());
 
-		pageBottom.setBackground(Color.BLACK);
+		pageBottom.setBackground(new Color(107, 106, 104));
 	    pageBottom.setForeground(Color.WHITE);
 	    pageBottom.setFont(f);
 	    

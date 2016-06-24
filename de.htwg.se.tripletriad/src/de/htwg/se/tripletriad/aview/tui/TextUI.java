@@ -2,14 +2,16 @@ package de.htwg.se.tripletriad.aview.tui;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import de.htwg.se.tripletriad.controller.impl.TripleTriadController;
 import de.htwg.se.tripletriad.util.observer.Event;
 import de.htwg.se.tripletriad.util.observer.IObserver;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class TextUI implements IObserver{
 
     private static final String NEWLINE = System.getProperty("line.separator");
+    private static final Logger log4j = LogManager.getLogger(TextUI.class.getName());
  
     private TripleTriadController controller;
 
@@ -50,12 +52,11 @@ public class TextUI implements IObserver{
     
     public void printTUI() {
     	
-        System.out.println("");
-        System.out.println(NEWLINE + controller.toString());
-        System.out.println(NEWLINE + controller.getStatusText());
-        System.out.println(NEWLINE + controller.getPlayer().getName() + " your turn");
-        System.out.println(NEWLINE + "First choose a Card, then a Slot 1-9");
-        System.out.println(NEWLINE + controller.getPlayer().getDeck().toString());
+        log4j.info(NEWLINE + controller.toString());
+        log4j.info(NEWLINE + controller.getStatusText());
+        log4j.info(NEWLINE + controller.getPlayer().getName() + " your turn");
+        log4j.info(NEWLINE + "First choose a Card, then a Slot 1-9");
+        log4j.info(NEWLINE + controller.getPlayer().getDeck().toString());
     }
 }
 

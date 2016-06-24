@@ -59,7 +59,7 @@ public class StartFrame implements ActionListener {
 		JTextArea label = new JTextArea(object.showMessageAbout());
 		label.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 40));
 		label.setEditable(false);
-		label.setBackground(Color.GRAY);
+		label.setBackground(new Color(107, 106, 104));
 		label.setForeground(Color.WHITE);
 		
 		modeFrame.add(label);
@@ -69,7 +69,6 @@ public class StartFrame implements ActionListener {
 	@Override
 	public void actionPerformed (ActionEvent in){
 		if(in.getSource() == this.startButton) {
-			
 			GraphicalUI.startGameGUI();
 			mainFrame.dispose();
 		}

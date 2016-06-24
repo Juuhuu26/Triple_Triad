@@ -20,7 +20,7 @@ public class GameFrameTop {
 				GraphicalUI.controller2.getPlayer1().getName() + ":\t5 \n" + 
 				GraphicalUI.controller2.getPlayer2().getName() + 
 				"\t5 \n-------------------------");
-		pageTop.setBackground(Color.BLACK);
+		pageTop.setBackground(new Color(107, 106, 104));
 	    pageTop.setForeground(Color.WHITE);
 	    pageTop.setFont(f);
 	    pageTop.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
