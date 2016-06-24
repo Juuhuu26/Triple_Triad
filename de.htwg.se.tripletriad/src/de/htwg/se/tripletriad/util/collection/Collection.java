@@ -5,11 +5,7 @@ import java.awt.Font;
 
 public final class Collection {
 
-    private Collection() {
-    	
-    }
-    
-    public static final int GAME_FRAME_WIDTH = 1000;
+	public static final int GAME_FRAME_WIDTH = 1000;
     public static final int GAME_FRAME_HEIGHT = 700;
     
     public static final int ABOUT_FRAME_WIDTH = 380;
@@ -28,5 +24,9 @@ public final class Collection {
     public static final Font SIDEBAR_FONT = new Font("HelveticaNeue", Font.PLAIN, 13);
     
     public static final int MAX_ACTIONS = 9;
-   
+	
+    private Collection() {
+    	
+    }
+    
 }
