@@ -23,9 +23,9 @@ public class TripleTriad {
     private static final String NEWLINE = System.getProperty("line.separator");
 	private static final Logger log4j = LogManager.getLogger(TripleTriad.class.getName());
 
-	/* Implementation of Singleton Desing Pattern
-	 * Falls keine Instanz angelegt wurde, neues Spiel aufbauen.
-	 *  */
+	/* 
+	 * Implementierung von Singleton Design Pattern 
+	 */
 	public static TripleTriad getInstance() {
 		if (instance == null) {
 			log4j.info(NEWLINE + "Spiel wird aufgebaut..");
@@ -42,8 +42,8 @@ public class TripleTriad {
 	    tui = new TextUI(controller);
 	    tui.printTUI();
 	    
-	    gui = new GraphicalUI(controller);
-	    // gui.startGameGUI();
+	    //gui = new GraphicalUI(controller);
+	    //gui.startGUI();
 	    
 	}
 	
