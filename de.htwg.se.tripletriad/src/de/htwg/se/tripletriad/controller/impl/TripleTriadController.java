@@ -22,8 +22,8 @@ public class TripleTriadController extends Observable {
 	
 	public TripleTriadController(){
 		gameField = new Gamefield();
-		playerBlue = new Player("Player 1", 'b');
-		playerRed = new Player("Player 2", 'r');
+		playerBlue = new Player("Player 1, b", 'b');
+		playerRed = new Player("Player 2, r", 'r');
 		usedSlot = new ArrayList<>();
 	}
 	

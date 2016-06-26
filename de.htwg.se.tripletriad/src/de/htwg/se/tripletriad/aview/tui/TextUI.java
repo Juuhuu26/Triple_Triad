@@ -62,18 +62,16 @@ public class TextUI implements IObserver{
     	
 	    log4j.info(NEWLINE + controller.toString());
 	    log4j.info(NEWLINE + controller.getStatusText());
-	
-	    if (controller.getPlayer().getName() == "Player 1") {
-	    	pl1.goPl1(context);
-	    } else if (controller.getPlayer().getName() == "Player 2") {
-	    	pl2.goPl2(context);
-	    }
-	    
 	    log4j.info(NEWLINE + "First choose a Card, then a Slot 1-9");
 	    log4j.info(NEWLINE + controller.getPlayer().getDeck().toString());
 	    log4j.info(NEWLINE + "Score:");
-	    log4j.info(NEWLINE + "Player 1:\t" + controller.getPlayer1().getTotalPoint());
-	    log4j.info(NEWLINE + "Player 2:\t" + controller.getPlayer2().getTotalPoint());
+	    log4j.info(NEWLINE + "Player 1, b:\t" + controller.getPlayer1().getTotalPoint());
+	    log4j.info(NEWLINE + "Player 2, r:\t" + controller.getPlayer2().getTotalPoint());
+	    if (controller.getPlayer().getName() == "Player 1, b") {
+	    	pl1.goPl1(context);
+	    } else if (controller.getPlayer().getName() == "Player 2, r") {
+	    	pl2.goPl2(context);
+	    }
     }
 }
 

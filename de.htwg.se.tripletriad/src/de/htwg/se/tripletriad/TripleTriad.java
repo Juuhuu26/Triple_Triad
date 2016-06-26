@@ -38,15 +38,12 @@ public class TripleTriad {
 
 	    controller = new TripleTriadController();
 	    controller.setPlayer();
-	    
-	    controller = new TripleTriadController();
-	    controller.setPlayer();
 
 	    tui = new TextUI(controller);
 	    tui.printTUI();
 	    
 	    gui = new GraphicalUI(controller);
-	    GraphicalUI.startGUI();
+	    // gui.startGameGUI();
 	    
 	}
 	
@@ -62,9 +59,7 @@ public class TripleTriad {
 	    boolean continu = true;
 	    scanner = new Scanner(System.in);
 	    while (continu) {
-
 	        continu = tui.processInputLine(scanner.next());
-
 	    }
 	    
 	}
