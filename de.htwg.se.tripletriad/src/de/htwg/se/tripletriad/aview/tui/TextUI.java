@@ -71,6 +71,9 @@ public class TextUI implements IObserver{
 	    
 	    log4j.info(NEWLINE + "First choose a Card, then a Slot 1-9");
 	    log4j.info(NEWLINE + controller.getPlayer().getDeck().toString());
+	    log4j.info(NEWLINE + "Score:");
+	    log4j.info(NEWLINE + "Player 1:\t" + controller.getPlayer1().getTotalPoint());
+	    log4j.info(NEWLINE + "Player 2:\t" + controller.getPlayer2().getTotalPoint());
     }
 }
 
