@@ -15,6 +15,7 @@ public class GraphicalUI implements IObserver {
 
 	public GraphicalUI() {
 		
+		// new Frame
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
