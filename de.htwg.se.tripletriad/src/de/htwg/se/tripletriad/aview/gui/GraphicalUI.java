@@ -31,8 +31,8 @@ public class GraphicalUI implements IObserver {
 		
 	}
 	
-    public GraphicalUI(TripleTriadController controller2) {
-		this.controller = controller2;
+    public GraphicalUI(TripleTriadController controller) {
+		GraphicalUI.controller = controller;
 		controller.addObserver(this);
 	}
 

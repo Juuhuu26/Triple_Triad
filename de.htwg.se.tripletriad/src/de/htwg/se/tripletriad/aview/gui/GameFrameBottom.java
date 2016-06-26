@@ -1,16 +1,13 @@
 package de.htwg.se.tripletriad.aview.gui;
 
 import java.awt.ComponentOrientation;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
 import de.htwg.se.tripletriad.util.collection.Collection;
 
-public class GameFrameBottom implements ActionListener {
+public class GameFrameBottom {
 	
 	static JTextField pageBottom;
 	static JButton enter;
@@ -29,12 +26,6 @@ public class GameFrameBottom implements ActionListener {
 	    
 	    return pageBottom;
 	    
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
