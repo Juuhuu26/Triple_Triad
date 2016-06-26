@@ -9,8 +9,8 @@ public class GameFrameRight {
 	
 	public static JTextArea buildRight() {
 		
-		JTextArea pageRight = new JTextArea(GraphicalUI.controller2.getPlayer2().getName() + 
-				"\n------------ \nDeck:\n\n" + GraphicalUI.controller2.getPlayer2().getDeck().toString());
+		JTextArea pageRight = new JTextArea(GraphicalUI.controller.getPlayer2().getName() + 
+				"\n------------ \nDeck:\n\n" + GraphicalUI.controller.getPlayer2().getDeck().toString());
 		pageRight.setBackground(Collection.GAME_SIDEBAR_BACKGROUND_COLOR);
 	    pageRight.setForeground(Collection.FONT_COLOR_BLACK);
 	    pageRight.setFont(Collection.SIDEBAR_FONT);

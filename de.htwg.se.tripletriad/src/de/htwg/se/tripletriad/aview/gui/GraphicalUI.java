@@ -11,7 +11,7 @@ import de.htwg.se.tripletriad.util.observer.IObserver;
 
 public class GraphicalUI implements IObserver {
 	
-	public static TripleTriadController controller2;
+	public static TripleTriadController controller;
 
 	public GraphicalUI() {
 		
@@ -32,8 +32,8 @@ public class GraphicalUI implements IObserver {
 	}
 	
     public GraphicalUI(TripleTriadController controller2) {
-		this.controller2 = controller2;
-		controller2.addObserver(this);
+		this.controller = controller2;
+		controller.addObserver(this);
 	}
 
     @Override

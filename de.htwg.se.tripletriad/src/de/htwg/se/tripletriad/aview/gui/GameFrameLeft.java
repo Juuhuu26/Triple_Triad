@@ -10,8 +10,8 @@ public class GameFrameLeft {
 	
 	public static JTextArea buildLeft() {
 		
-		JTextArea pageLeft = new JTextArea(GraphicalUI.controller2.getPlayer1().getName() + 
-				"\n------------ \nDeck:\n\n" + GraphicalUI.controller2.getPlayer1().getDeck().toString());
+		JTextArea pageLeft = new JTextArea(GraphicalUI.controller.getPlayer1().getName() + 
+				"\n------------ \nDeck:\n\n" + GraphicalUI.controller.getPlayer1().getDeck().toString());
 		pageLeft.setBackground(Collection.GAME_SIDEBAR_BACKGROUND_COLOR);
 	    pageLeft.setForeground(Collection.FONT_COLOR_BLACK);
 	    pageLeft.setFont(Collection.SIDEBAR_FONT);

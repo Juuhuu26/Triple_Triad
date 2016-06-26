@@ -9,7 +9,7 @@ public class GameFrameCenter {
 	
 	public static JTextArea buildCenterFrame() {
 		
-		JTextArea center = new JTextArea(GraphicalUI.controller2.toString());
+		JTextArea center = new JTextArea(GraphicalUI.controller.toString());
 		center.setBorder(BorderFactory.createEmptyBorder(20, 50, 70, 70));
 		center.setEditable(true);
 		center.setEditable(true);
