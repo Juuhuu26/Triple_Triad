@@ -24,7 +24,7 @@ public class TripleTriad {
 	private static final Logger log4j = LogManager.getLogger(TripleTriad.class.getName());
 
 	/* 
-	 * Implementierung von Singleton Design Pattern 
+	 * Implementation of the Singleton Design Pattern to create a new instance if no ones built
 	 */
 	public static TripleTriad getInstance() {
 		if (instance == null) {
@@ -42,8 +42,8 @@ public class TripleTriad {
 	    tui = new TextUI(controller);
 	    tui.printTUI();
 	    
-	    //gui = new GraphicalUI(controller);
-	    //gui.startGUI();
+	    gui = new GraphicalUI(controller);
+	    gui.startGUI();
 	    
 	}
 	
@@ -61,6 +61,10 @@ public class TripleTriad {
 	    while (continu) {
 	        continu = tui.processInputLine(scanner.next());
 	    }
+	    System.out.println("FINAL BOARD\n" + controller.toString());
+	    System.out.println("Score:\nPlayer 1:\t"+controller.getPlayer1().getTotalPoint());
+	    System.out.println("Player 2:\t"+controller.getPlayer2().getTotalPoint());
+	    System.out.println(controller.getWinner());
 	    
 	}
 }
