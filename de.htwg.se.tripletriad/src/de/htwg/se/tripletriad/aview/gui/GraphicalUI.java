@@ -36,7 +36,7 @@ public class GraphicalUI implements IObserver {
 		
 		GraphicalUI.controller = controller;
         controller.addObserver(this);
-		/* 
+		
 		menuFrame = new JFrame();
 		menuFrame.setTitle("Menu");
 		menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,8 +48,8 @@ public class GraphicalUI implements IObserver {
 		startButton = new JButton("Start Game");
 		startButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				menuFrame.dispose();
 				gameFrame.setVisible(true);
+				menuFrame.setVisible(false);
 			}
 		});
 	
@@ -87,7 +87,7 @@ public class GraphicalUI implements IObserver {
 		menuFrame.setPreferredSize(new Dimension(Collection.MENU_FRAME_WIDTH, Collection.MENU_FRAME_HEIGHT));
 		menuFrame.pack();
 		menuFrame.setVisible(true);
-		menuFrame.setResizable(false); */
+		menuFrame.setResizable(false);
 		
 		/*---TOP_VIEW-------------------------------------------------------------------*/
 		pageTop = new JTextArea(controller.getPlayer().getName()  + 
@@ -125,7 +125,7 @@ public class GraphicalUI implements IObserver {
 		
 	    /*---CENTER--------------------------------------------------------------------*/
 	    center = new JTextArea(controller.toString());
-		center.setBorder(BorderFactory.createEmptyBorder(20, 50, 70, 70));
+		center.setBorder(BorderFactory.createEmptyBorder(70, 50, 70, 70));
 		center.setEditable(true);
 		center.setFont(Collection.CENTER_FONT);
 	    /*-----------------------------------------------------------------------------*/
@@ -169,7 +169,7 @@ public class GraphicalUI implements IObserver {
 		gameFrame.getContentPane().add(pageRight, BorderLayout.LINE_END);				
 		gameFrame.setPreferredSize(new Dimension(Collection.GAME_FRAME_WIDTH, Collection.GAME_FRAME_HEIGHT));
 		gameFrame.pack();
-		gameFrame.setVisible(true);
+		gameFrame.setVisible(false);
 		gameFrame.setResizable(false);	
 		/*-----------------------------------------------------------------------------*/
 		
