@@ -19,7 +19,7 @@ import org.apache.logging.log4j.LogManager;
 public class TextUI implements IObserver{
 
     private static final String NEWLINE = System.getProperty("line.separator");
-    private static final Logger log4j = LogManager.getLogger(TextUI.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(TextUI.class.getName());
  
     private ITripleTriadController controller;
     
@@ -44,7 +44,7 @@ public class TextUI implements IObserver{
                 continu = controller.setCard(arg[0]-1, arg[1]);
                 printTUI();
             } else {
-                System.out.println("Illegal command");
+                LOGGER.info("Illegal command");
             }
         return continu;
     }
@@ -66,13 +66,13 @@ public class TextUI implements IObserver{
     	StatePlayerOne pl1 = new StatePlayerOne();
     	StatePlayerTwo pl2 = new StatePlayerTwo();
     	
-	    log4j.info(NEWLINE + controller.toString());
-	    log4j.info(NEWLINE + controller.getStatusText());
-	    log4j.info(NEWLINE + "First choose a Card, then a Slot 1-9");
-	    log4j.info(NEWLINE + controller.getPlayer().getDeck().toString());
-	    log4j.info(NEWLINE + "Score:");
-	    log4j.info(NEWLINE + "Player 1, b:\t" + controller.getPlayer1().getTotalPoint());
-	    log4j.info(NEWLINE + "Player 2, r:\t" + controller.getPlayer2().getTotalPoint());
+	    LOGGER.info(NEWLINE + controller.toString());
+	    LOGGER.info(NEWLINE + controller.getStatusText());
+	    LOGGER.info(NEWLINE + "First choose a Card, then a Slot 1-9");
+	    LOGGER.info(NEWLINE + controller.getPlayer().getDeck().toString());
+	    LOGGER.info(NEWLINE + "Score:");
+	    LOGGER.info(NEWLINE + "Player 1, b:\t" + controller.getPlayer1().getTotalPoint());
+	    LOGGER.info(NEWLINE + "Player 2, r:\t" + controller.getPlayer2().getTotalPoint());
 	    
 	    if (controller.getPlayer().getName() == "Player 1, b") {
 	    	pl1.goPl1(context);

@@ -20,19 +20,8 @@ public final class TripleTriad {
     private static final String NEWLINE = System.getProperty("line.separator");
 	private static final Logger LOGGER = LogManager.getLogger(TripleTriad.class.getName());
 
-	/* 
-	 * Implementation of the Singleton Design Pattern to create a new instance if no ones built
-	 */
-	public static TripleTriad getInstance() {
-		if (instance == null) {
-			LOGGER.info(NEWLINE + "Spiel wird aufgebaut..");
-			instance = new TripleTriad();
-		}
-		return instance;
-	}
-	
 	private TripleTriad() { 
-	
+		
 	    controller = new TripleTriadController();
 	    controller.setPlayer();
 
@@ -44,6 +33,16 @@ public final class TripleTriad {
 	    
 	}
 	
+	/* 
+	 * Implementation of the Singleton Design Pattern to create a new instance if no ones built
+	 */
+	public static TripleTriad getInstance() {
+		if (instance == null) {
+			LOGGER.info(NEWLINE + "Spiel wird aufgebaut..");
+			instance = new TripleTriad();
+		}
+		return instance;
+	}
 	
 	public TextUI getTUI() {
 		return tui;

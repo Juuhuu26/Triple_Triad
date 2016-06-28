@@ -124,6 +124,7 @@ public class TripleTriadController implements IObservable, ITripleTriadControlle
 		return st;
 	}
 	
+	@Override
 	public String getStatusText(){
 		return stText;
 	}
@@ -135,31 +136,26 @@ public class TripleTriadController implements IObservable, ITripleTriadControlle
 
 	@Override
 	public void addObserver(IObserver s) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void removeObserver(IObserver s) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void removeAllObservers() {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void notifyObservers() {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void notifyObservers(Event e) {
-		// TODO Auto-generated method stub
-		
+
 	}
 }
