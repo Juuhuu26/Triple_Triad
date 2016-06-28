@@ -2,8 +2,9 @@ package de.htwg.se.tripletriad.controller;
 
 import de.htwg.se.tripletriad.controller.impl.GameStatus;
 import de.htwg.se.tripletriad.model.impl.Player;
+import de.htwg.se.tripletriad.util.observer.IObservable;
 
-public interface ITripleTriadController {
+public interface ITripleTriadController extends IObservable {
 	
 	/**
 	 * 

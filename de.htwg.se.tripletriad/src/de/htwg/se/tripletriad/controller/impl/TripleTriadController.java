@@ -3,24 +3,32 @@ package de.htwg.se.tripletriad.controller.impl;
 import de.htwg.se.tripletriad.controller.ITripleTriadController;
 import de.htwg.se.tripletriad.model.impl.*;
 import de.htwg.se.tripletriad.util.collection.Collection;
-import de.htwg.se.tripletriad.util.observer.Observable;
+import de.htwg.se.tripletriad.util.observer.Event;
+import de.htwg.se.tripletriad.util.observer.IObservable;
+import de.htwg.se.tripletriad.util.observer.IObserver;
 
 import java.util.List;
+
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
+
 import java.util.ArrayList;
 
-public class TripleTriadController extends Observable implements ITripleTriadController {
+@Singleton
+public class TripleTriadController implements IObservable, ITripleTriadController {
+		
 	
 	private GameStatus st = GameStatus.WELCOME;
 	private String stText = "Quit with q";
 	private Gamefield gameField;
 	private List<Integer> usedSlot;
-	
 	private Player playerBlue;
 	private Player playerRed;
 	private Player currentP;
 	
 	private int counter = 0;
 	
+	@Inject
 	public TripleTriadController(){
 		gameField = new Gamefield();
 		playerBlue = new Player("Player 1, b", 'b');
@@ -114,5 +122,35 @@ public class TripleTriadController extends Observable implements ITripleTriadCon
 	@Override
 	public String toString(){
 		return gameField.toString();
+	}
+
+	@Override
+	public void addObserver(IObserver s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeObserver(IObserver s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeAllObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers(Event e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
