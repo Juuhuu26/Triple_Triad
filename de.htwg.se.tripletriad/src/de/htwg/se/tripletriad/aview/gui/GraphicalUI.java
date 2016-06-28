@@ -47,6 +47,7 @@ public class GraphicalUI implements IObserver {
 		
 		startButton = new JButton("Start Game");
 		startButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent event) {
 				gameFrame.setVisible(true);
 				menuFrame.setVisible(false);
@@ -55,6 +56,7 @@ public class GraphicalUI implements IObserver {
 	
 		aboutButton = new JButton("About");
 		aboutButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent event) {
 				aboutFrame = new JFrame();
 				aboutFrame.setTitle("About");
@@ -66,7 +68,6 @@ public class GraphicalUI implements IObserver {
 				label.setEditable(false);
 				label.setBackground(Collection.MENU_GAME_BACKGROUND_COLOR);
 				label.setForeground(Collection.FONT_COLOR_WHITE);
-				
 				aboutFrame.add(label);
 				aboutFrame.setVisible(true);
 			}
@@ -74,8 +75,9 @@ public class GraphicalUI implements IObserver {
 		
 		quitButton = new JButton("Quit Game");
 		quitButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent event) {
-				System.exit(0);
+				Runtime.getRuntime().halt(0);
 			}
 		});
 		
@@ -92,9 +94,9 @@ public class GraphicalUI implements IObserver {
 		/*---TOP_VIEW-------------------------------------------------------------------*/
 		pageTop = new JTextArea(controller.getPlayer().getName()  + 
 				", it's your turn!"
-				+ "\n-------------------------" + "\nCurrent Points: \n" + 
+				+ Collection.EMPTY_LINE + "\nCurrent Points: \n" + 
 				controller.getPlayer1().getName() + ":\t"+ controller.getPlayer1().getTotalPoint() + "\n" + 
-				controller.getPlayer2().getName() + "\t"+ controller.getPlayer2().getTotalPoint() + "\n-------------------------");
+				controller.getPlayer2().getName() + "\t"+ controller.getPlayer2().getTotalPoint() + Collection.EMPTY_LINE);
 		pageTop.setBackground(Collection.MENU_GAME_BACKGROUND_COLOR);
 	    pageTop.setForeground(Collection.FONT_COLOR_WHITE);
 	    pageTop.setFont(Collection.MAIN_FONT);
@@ -105,7 +107,7 @@ public class GraphicalUI implements IObserver {
 	    
 	    /*---LEFT_SIDEBAR--------------------------------------------------------------*/
 	    pageLeft = new JTextArea(controller.getPlayer1().getName() + 
-				"\n------------ \nDeck:\n\n" + controller.getPlayer1().getDeck().toString());
+				Collection.DECK_LINE + controller.getPlayer1().getDeck().toString());
 		pageLeft.setBackground(Collection.GAME_SIDEBAR_BACKGROUND_COLOR);
 	    pageLeft.setForeground(Collection.FONT_COLOR_BLACK);
 	    pageLeft.setFont(Collection.SIDEBAR_FONT);
@@ -115,7 +117,7 @@ public class GraphicalUI implements IObserver {
 	    
 	    /*---RIGHT_SIDEBAR-------------------------------------------------------------*/
 	    pageRight = new JTextArea(controller.getPlayer2().getName() + 
-				"\n------------ \nDeck:\n\n" + controller.getPlayer2().getDeck().toString());
+				Collection.DECK_LINE + controller.getPlayer2().getDeck().toString());
 		pageRight.setBackground(Collection.GAME_SIDEBAR_BACKGROUND_COLOR);
 	    pageRight.setForeground(Collection.FONT_COLOR_BLACK);
 	    pageRight.setFont(Collection.SIDEBAR_FONT);
@@ -139,6 +141,7 @@ public class GraphicalUI implements IObserver {
 	    pageBottom.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 	    pageBottom.setEditable(true);
 	    pageBottom.addActionListener(new ActionListener() {
+	    	@Override
 	    	public void actionPerformed(ActionEvent event) {
 	    		String line = pageBottom.getText();
 	    		if (line.startsWith("-q")) {
@@ -189,14 +192,14 @@ public class GraphicalUI implements IObserver {
 	public void updateStatus() {
 		center.setText(controller.toString());
         pageRight.setText(controller.getPlayer2().getName() + 
-                "\n------------ \nDeck:\n\n" + controller.getPlayer2().getDeck().toString());
+                Collection.DECK_LINE + controller.getPlayer2().getDeck().toString());
         pageLeft.setText(controller.getPlayer1().getName() + 
-                "\n------------ \nDeck:\n\n" + controller.getPlayer1().getDeck().toString());
+                Collection.DECK_LINE + controller.getPlayer1().getDeck().toString());
         pageTop.setText(controller.getPlayer().getName()  + 
 	", it's your turn!"
-	+ "\n-------------------------" + "\nCurrent Points: \n" + 
+	+ Collection.EMPTY_LINE + "\nCurrent Points: \n" + 
 	controller.getPlayer1().getName() + ":\t"+ controller.getPlayer1().getTotalPoint() + "\n" + 
-	controller.getPlayer2().getName() + "\t"+ controller.getPlayer2().getTotalPoint() + "\n-------------------------");
+	controller.getPlayer2().getName() + "\t"+ controller.getPlayer2().getTotalPoint() + Collection.EMPTY_LINE);
 	}
 	
     @Override

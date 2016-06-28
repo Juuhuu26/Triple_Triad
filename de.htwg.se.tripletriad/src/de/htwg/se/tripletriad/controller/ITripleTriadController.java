@@ -40,7 +40,8 @@ public interface ITripleTriadController extends IObservable {
 	 * 
 	 * @param: 
 	 */
-
+	void updateStatus(int c);
+	
 	/**
 	 * 
 	 * @param: 

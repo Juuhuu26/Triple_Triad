@@ -25,6 +25,10 @@ public final class Collection {
     public static final Font CENTER_FONT = new Font("Courier", Font.PLAIN, 25);
     
     public static final int MAX_ACTIONS = 9;
+    
+    public static final String EMPTY_LINE = "\n-------------------------";
+    public static final String DECK_LINE = "\n------------ \nDeck:\n\n";
+
 	
     private Collection() {
     	

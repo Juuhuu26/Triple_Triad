@@ -36,23 +36,28 @@ public class TripleTriadController implements IObservable, ITripleTriadControlle
 		usedSlot = new ArrayList<>();
 	}
 	
+	@Override
 	public Player getPlayer(){
 		return currentP;
 	}
 	
+	@Override
 	public Player getPlayer1(){
 		return playerBlue;
 	}
 	
+	@Override
 	public Player getPlayer2(){
 		return playerRed;
 	}
 	
+	@Override
 	public void setPlayer(){
 		currentP = playerBlue;	
 		notifyObservers();
 	}
 	
+	@Override
 	public void switchP(){
 		if(currentP == playerBlue)
 			currentP = playerRed;
@@ -60,7 +65,8 @@ public class TripleTriadController implements IObservable, ITripleTriadControlle
 			currentP = playerBlue;
 	}
 	
-	private void updateStatus(int c){
+	@Override
+	public void updateStatus(int c){
 		for(int i = 0; i < c; i++)
 			currentP.increasePoint();
 		switchP();
@@ -68,6 +74,7 @@ public class TripleTriadController implements IObservable, ITripleTriadControlle
 			currentP.decreasePoint();
 	}
 		
+	@Override
 	public boolean setCard(int card, int pos){
 		try{		
 			if(usedSlot.contains(pos) || pos > 9){
@@ -98,6 +105,7 @@ public class TripleTriadController implements IObservable, ITripleTriadControlle
 		return true;
 	}
 	
+	@Override
 	public String getWinner(){		
 		String winner;
 		int p1 = playerBlue.getTotalPoint();
@@ -111,6 +119,7 @@ public class TripleTriadController implements IObservable, ITripleTriadControlle
 		return winner;
 	}
 	
+	@Override
 	public GameStatus getStatus(){
 		return st;
 	}
