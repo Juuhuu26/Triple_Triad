@@ -208,6 +208,6 @@ public class GraphicalUI implements IObserver {
     }
     
 	public static void startGUI() {
-		GraphicalUI gUI = new GraphicalUI(controller);
+		new GraphicalUI(controller);
 	}
 }

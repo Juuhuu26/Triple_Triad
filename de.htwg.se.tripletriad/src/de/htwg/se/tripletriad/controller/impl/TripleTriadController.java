@@ -136,26 +136,26 @@ public class TripleTriadController implements IObservable, ITripleTriadControlle
 
 	@Override
 	public void addObserver(IObserver s) {
-
+		// Do nothing
 	}
 
 	@Override
 	public void removeObserver(IObserver s) {
-
+		// Do nothing
 	}
 
 	@Override
 	public void removeAllObservers() {
-
+		// Do nothing
 	}
 
 	@Override
 	public void notifyObservers() {
-
+		// Do nothing
 	}
 
 	@Override
 	public void notifyObservers(Event e) {
-
+		// Do nothing
 	}
 }
