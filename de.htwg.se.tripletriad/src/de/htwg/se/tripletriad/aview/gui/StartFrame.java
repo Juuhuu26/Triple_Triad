@@ -23,6 +23,7 @@ public class StartFrame {
 	public StartFrame() {
 		
 		mainFrame = new JFrame();
+		mainFrame.setTitle("Menu");
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.setLayout(new BoxLayout(mainFrame.getContentPane(), BoxLayout.Y_AXIS));
 		mainFrame.setFont(Collection.MAIN_FONT);

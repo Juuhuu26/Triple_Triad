@@ -1,5 +1,6 @@
 package de.htwg.se.tripletriad.controller.impl;
 
+import de.htwg.se.tripletriad.controller.ITripleTriadController;
 import de.htwg.se.tripletriad.model.impl.*;
 import de.htwg.se.tripletriad.util.collection.Collection;
 import de.htwg.se.tripletriad.util.observer.Observable;
@@ -7,7 +8,7 @@ import de.htwg.se.tripletriad.util.observer.Observable;
 import java.util.List;
 import java.util.ArrayList;
 
-public class TripleTriadController extends Observable {
+public class TripleTriadController extends Observable implements ITripleTriadController {
 	
 	private GameStatus st = GameStatus.WELCOME;
 	private String stText = "Quit with q";
