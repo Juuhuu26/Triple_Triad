@@ -39,15 +39,12 @@ public interface ITripleTriadController {
 	 * 
 	 * @param: 
 	 */
-	void updateStatus();
-	
-	void getElapsedTime();
-	
+
 	/**
 	 * 
 	 * @param: 
 	 */
-	boolean setCard();
+	boolean setCard(int card, int pos);
 	
 	/**
 	 * 

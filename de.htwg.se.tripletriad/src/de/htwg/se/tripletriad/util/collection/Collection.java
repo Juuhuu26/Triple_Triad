@@ -22,7 +22,7 @@ public final class Collection {
 
     public static final Font MAIN_FONT = new Font("HelveticaNeue", Font.PLAIN, 15);
     public static final Font SIDEBAR_FONT = new Font("HelveticaNeue", Font.PLAIN, 13);
-    public static final Font CENTER_FONT = new Font("CourierNew", Font.PLAIN, 25);
+    public static final Font CENTER_FONT = new Font("Monospace", Font.PLAIN, 25);
     
     public static final int MAX_ACTIONS = 9;
 	
