@@ -47,4 +47,8 @@ public class Player implements IPlayer {
 	public int getTotalPoint(){
 		return point;
 	}
+	
+	public void addToDeck(Card c) {
+	    hand.addCard(c);
+	}
 }
