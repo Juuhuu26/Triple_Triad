@@ -1,7 +1,7 @@
 package de.htwg.se.tripletriad.controller.impl;
 
 import de.htwg.se.tripletriad.controller.ITripleTriadController;
-import de.htwg.se.tripletriad.model.impl.*;
+import de.htwg.se.tripletriad.model.*;
 import de.htwg.se.tripletriad.util.collection.Collection;
 import de.htwg.se.tripletriad.util.observer.Observable;
 import java.util.List;
@@ -14,37 +14,40 @@ public class TripleTriadController extends Observable implements ITripleTriadCon
 	
 	private GameStatus st = GameStatus.WELCOME;
 	private String stText = "Quit with q";
-	private Gamefield gameField;
+	private IGamefield gameField;
+	private IGamefieldFactory gFactory;
 	private List<Integer> usedSlot;
-	private Player playerBlue;
-	private Player playerRed;
-	private Player currentP;
+	private IPlayer playerBlue, playerRed, currentP;
+	private IPlayerFactory p1Factory, p2Factory, cFactory;
 	
 	private int counter = 0;
 	
 	@Inject
-	public TripleTriadController(int strategy){
-	    if(strategy == 1)
-	        gameField = new GamefieldStandard();
-	    else
-	        gameField = new GamefieldInverse();
-		playerBlue = new Player("Player 1, b", 'b');
-		playerRed = new Player("Player 2, r", 'r');
+	public TripleTriadController(IGamefieldFactory gFactory, IPlayerFactory p1, IPlayerFactory p2){
+	    this.gFactory = gFactory;
+	    this.gameField = gFactory.creat();
+	    
+	    this.p1Factory = p1;
+	    this.playerBlue = p1Factory.creat("Player 1, b", 'b');
+	    
+	    this.p1Factory = p2;
+        this.playerBlue = p2Factory.creat("Player 2, r", 'r');
+
 		usedSlot = new ArrayList<>();
 	}
 	
 	@Override
-	public Player getPlayer(){
+	public IPlayer getPlayer(){
 		return currentP;
 	}
 	
 	@Override
-	public Player getPlayer1(){
+	public IPlayer getPlayer1(){
 		return playerBlue;
 	}
 	
 	@Override
-	public Player getPlayer2(){
+	public IPlayer getPlayer2(){
 		return playerRed;
 	}
 	
@@ -83,8 +86,7 @@ public class TripleTriadController extends Observable implements ITripleTriadCon
 				stText = Integer.toString(card);
 			} else {
 			    usedSlot.add(pos);
-				Card c = currentP.getDeck().getHand().get(card);
-				int changes = gameField.setCardField(c, pos);
+				int changes = gameField.setCardField(currentP.getDeck().getHand().get(card), pos);
 				currentP.getDeck().removeCard(card);
 				updateStatus(changes);
 				counter++;

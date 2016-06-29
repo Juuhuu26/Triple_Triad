@@ -3,10 +3,13 @@ package de.htwg.se.tripletriad;
 import java.util.Scanner;
 
 import de.htwg.se.tripletriad.aview.tui.TextUI;
-import de.htwg.se.tripletriad.aview.gui.*;
+import de.htwg.se.tripletriad.aview.gui.GraphicalUI;
 import de.htwg.se.tripletriad.controller.ITripleTriadController;
-import de.htwg.se.tripletriad.controller.impl.TripleTriadController; 
 import org.apache.logging.log4j.Logger;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
 import org.apache.logging.log4j.LogManager;
 
 
@@ -14,31 +17,33 @@ public final class TripleTriad {
 		
 	private static Scanner scanner;
 	private static TextUI tui;
-	private static GraphicalUI gui;
-	private final static int mode = 1;
+//	private final static int mode = 1;
 	private static TripleTriad instance = null;
-	private static ITripleTriadController controller;
+	protected static ITripleTriadController controller;
     private static final String NEWLINE = System.getProperty("line.separator");
 	private static final Logger LOGGER = LogManager.getLogger(TripleTriad.class.getName());
 
-	private TripleTriad(int strategy) { 
+	private TripleTriad() { 
 		
-	    controller = new TripleTriadController(strategy);
-	    controller.setPlayer();
-
-	    tui = new TextUI(controller);
-	    tui.printTUI();
+	    Injector injector = Guice.createInjector(new TripleTriadModule());
+	    
+	    controller = injector.getInstance(ITripleTriadController.class);
+	    
+	    @SuppressWarnings("unused")
+	    GraphicalUI gui = injector.getInstance(GraphicalUI.class);
+	    tui = injector.getInstance(TextUI.class);
 	    
 	    gui = new GraphicalUI(controller);
-	    
+	    tui = new TextUI(controller);
+
 	}
 	/* 
 	 * Implementation of the Singleton Design Pattern to create a new instance if no ones built
 	 */
-	public static TripleTriad getInstance(int strategy) {
+	public static TripleTriad getInstance() {
 		if (instance == null) {
 			LOGGER.info(NEWLINE + "Spiel wird aufgebaut..");
-			instance = new TripleTriad(strategy);
+			instance = new TripleTriad();
 		}
 		return instance;
 	}
@@ -49,7 +54,7 @@ public final class TripleTriad {
 
 	public static void main(String[] args) {
 
-		TripleTriad.getInstance(mode);
+		TripleTriad.getInstance();
 				
 	    boolean continu = true;
 	    scanner = new Scanner(System.in);

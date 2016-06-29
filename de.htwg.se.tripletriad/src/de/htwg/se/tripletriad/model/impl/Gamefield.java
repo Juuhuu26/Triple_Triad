@@ -1,8 +1,10 @@
 package de.htwg.se.tripletriad.model.impl;
 
 import de.htwg.se.tripletriad.model.IGamefield;
+import de.htwg.se.tripletriad.model.ICard;
+import de.htwg.se.tripletriad.model.ISinglefield;
 
-public abstract class Gamefield implements IGamefield {
+public class Gamefield implements IGamefield {
 
     private static final int HEIGHT = 3;
     private static final int WIDTH = 3;
@@ -32,7 +34,7 @@ public abstract class Gamefield implements IGamefield {
     }
     
     @Override
-    public int setCardField(Card c, int pos){
+    public int setCardField(ICard c, int pos){
     	changes = 0;
         switch(pos) {
         case 1:
@@ -93,63 +95,91 @@ public abstract class Gamefield implements IGamefield {
     }
 
     @Override
-    public void checkRight(Singlefield f, Card c) {
+    public void checkRight(ISinglefield f, ICard c) {
 
         Card c2;
         if(f.isBusy()){
-            c2 = f.getCard();
+            c2 = (Card) f.getCard();
             if(compareRight(c, c2))
                 changes++;
         }
     }
 
     @Override
-    public void checkDown(Singlefield f, Card c) {
+    public void checkDown(ISinglefield f, ICard c) {
 
         Card c2;
         if(f.isBusy()){
-            c2 = f.getCard();
+            c2 = (Card) f.getCard();
             if(compareDown(c, c2))
                 changes++;
         }
     }
 
     @Override
-    public void checkLeft(Singlefield f, Card c) {
+    public void checkLeft(ISinglefield f, ICard c) {
 
         Card c2;
         if(f.isBusy()){
-            c2 = f.getCard();
+            c2 = (Card) f.getCard();
             if(compareLeft(c, c2))
                 changes++;
         }
     }
 
     @Override
-    public void checkUp(Singlefield f, Card c) {
+    public void checkUp(ISinglefield f, ICard c) {
 
         Card c2;
         if(f.isBusy()){
-            c2 = f.getCard();
+            c2 = (Card) f.getCard();
             if(compareUp(c, c2))
                 changes++;
         }
     }
 
     @Override
-    public abstract boolean compareUp(Card c, Card c2);
+    public boolean compareUp(ICard c, ICard c2){
+
+        if(c.getColor() != c2.getColor() && c.getUp() > c2.getDown()){
+            c2.changeColor();
+            return true;
+        }
+        return false;
+    }
 
     @Override
-    public abstract boolean compareDown(Card c, Card c2);
+    public boolean compareDown(ICard c, ICard c2){
+
+        if(c.getColor() != c2.getColor() && c.getDown() > c2.getUp()){
+            c2.changeColor();
+            return true;
+        }
+        return false;
+    }
 
     @Override
-    public abstract boolean compareLeft(Card c, Card c2);
+    public boolean compareLeft(ICard c, ICard c2){
+
+        if(c.getColor() != c2.getColor() && c.getLeft() > c2.getRight()){
+            c2.changeColor();
+            return true;
+        }
+        return false;
+    }
 
     @Override
-    public abstract boolean compareRight(Card c, Card c2);
+    public boolean compareRight(ICard c, ICard c2){
+
+        if(c.getColor() != c2.getColor() && c.getRight() > c2.getLeft()){
+            c2.changeColor();
+            return true;
+        }
+        return false;
+    }
 
     @Override
-    public String lineOne(Card c1, Card c2, Card c3){
+    public String lineOne(ICard c1, ICard c2, ICard c3){
 
         StringBuilder sb = new StringBuilder();
         if(c1 != null)
@@ -168,7 +198,7 @@ public abstract class Gamefield implements IGamefield {
     }
 
     @Override
-    public String lineTwo(Card c1, Card c2, Card c3){
+    public String lineTwo(ICard c1, ICard c2, ICard c3){
 
         StringBuilder sb = new StringBuilder();
         if(c1 != null)
@@ -187,7 +217,7 @@ public abstract class Gamefield implements IGamefield {
     }
 
     @Override
-    public String lineThree(Card c1, Card c2, Card c3){
+    public String lineThree(ICard c1, ICard c2, ICard c3){
 
         StringBuilder sb = new StringBuilder();
         if(c1 != null)

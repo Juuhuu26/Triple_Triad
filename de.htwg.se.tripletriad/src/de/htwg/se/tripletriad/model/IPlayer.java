@@ -1,5 +1,4 @@
 package de.htwg.se.tripletriad.model;
-import de.htwg.se.tripletriad.model.impl.Deck;
 
 public interface IPlayer {
 	
@@ -19,7 +18,7 @@ public interface IPlayer {
 	 * 
 	 * @return: returns the player's current deck, consists of maximum five cards
 	 */
-	Deck getDeck();
+	IDeck getDeck();
 	
 	/**
 	 * 
