@@ -4,7 +4,7 @@ import de.htwg.se.tripletriad.model.IGamefield;
 import de.htwg.se.tripletriad.model.ICard;
 import de.htwg.se.tripletriad.model.ISinglefield;
 
-public class Gamefield implements IGamefield {
+public abstract class Gamefield implements IGamefield {
 
     private static final int HEIGHT = 3;
     private static final int WIDTH = 3;
@@ -139,44 +139,16 @@ public class Gamefield implements IGamefield {
     }
 
     @Override
-    public boolean compareUp(ICard c, ICard c2){
-
-        if(c.getColor() != c2.getColor() && c.getUp() > c2.getDown()){
-            c2.changeColor();
-            return true;
-        }
-        return false;
-    }
+    public abstract boolean compareUp(ICard c, ICard c2);
 
     @Override
-    public boolean compareDown(ICard c, ICard c2){
-
-        if(c.getColor() != c2.getColor() && c.getDown() > c2.getUp()){
-            c2.changeColor();
-            return true;
-        }
-        return false;
-    }
+    public abstract boolean compareDown(ICard c, ICard c2);
 
     @Override
-    public boolean compareLeft(ICard c, ICard c2){
-
-        if(c.getColor() != c2.getColor() && c.getLeft() > c2.getRight()){
-            c2.changeColor();
-            return true;
-        }
-        return false;
-    }
+    public abstract boolean compareLeft(ICard c, ICard c2);
 
     @Override
-    public boolean compareRight(ICard c, ICard c2){
-
-        if(c.getColor() != c2.getColor() && c.getRight() > c2.getLeft()){
-            c2.changeColor();
-            return true;
-        }
-        return false;
-    }
+    public abstract boolean compareRight(ICard c, ICard c2);
 
     @Override
     public String lineOne(ICard c1, ICard c2, ICard c3){

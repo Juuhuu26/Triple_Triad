@@ -6,16 +6,23 @@ import org.junit.Before;
 import org.junit.Test;
 
 import de.htwg.se.tripletriad.controller.impl.GameStatus;
-import de.htwg.se.tripletriad.controller.impl.TripleTriadController;
 import de.htwg.se.tripletriad.model.impl.*;
+import de.htwg.se.tripletriad.TripleTriadStandardModule;
+import de.htwg.se.tripletriad.TripleTriadInverseModule;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
 public class TripleTriadControllerTest {
 
-    TripleTriadController controller;
+    ITripleTriadController controller, cInverse;
+    Injector injector = Guice.createInjector(new TripleTriadStandardModule());
+    Injector injectorInverse = Guice.createInjector(new TripleTriadInverseModule());
     
     @Before
     public void setUp() {
-        controller = new TripleTriadController(0);
-        controller = new TripleTriadController(1);
+        controller = injector.getInstance(ITripleTriadController.class);
+        cInverse = injectorInverse.getInstance(ITripleTriadController.class);
     }
     
     @Test

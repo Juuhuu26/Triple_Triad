@@ -18,6 +18,7 @@ import de.htwg.se.tripletriad.controller.ITripleTriadController;
 import de.htwg.se.tripletriad.util.collection.Collection;
 import de.htwg.se.tripletriad.util.observer.Event;
 import de.htwg.se.tripletriad.util.observer.IObserver;
+import com.google.inject.Inject;
 
 public class GraphicalUI implements IObserver {
 	
@@ -31,6 +32,7 @@ public class GraphicalUI implements IObserver {
 	JTextArea center,pageLeft, pageRight, pageTop;
 	JTextField pageBottom;
 
+	@Inject
 	public GraphicalUI(final ITripleTriadController controller) {
 		
 		GraphicalUI.controller = controller;

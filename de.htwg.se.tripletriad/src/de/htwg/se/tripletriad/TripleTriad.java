@@ -25,7 +25,8 @@ public final class TripleTriad {
 
 	private TripleTriad() { 
 		
-	    Injector injector = Guice.createInjector(new TripleTriadModule());
+	    // Use TripleTriadeStrandardModule or TripleTriadInverseModul
+	    Injector injector = Guice.createInjector(new TripleTriadStandardModule());
 	    
 	    controller = injector.getInstance(ITripleTriadController.class);
 	    
@@ -35,6 +36,7 @@ public final class TripleTriad {
 	    
 	    gui = new GraphicalUI(controller);
 	    tui = new TextUI(controller);
+	    tui.printTUI();
 
 	}
 	/* 
