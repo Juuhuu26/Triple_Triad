@@ -29,10 +29,8 @@ public final class TripleTriad {
 	    tui.printTUI();
 	    
 	    gui = new GraphicalUI(controller);
-	    gui.startGUI();
 	    
 	}
-	
 	/* 
 	 * Implementation of the Singleton Design Pattern to create a new instance if no ones built
 	 */

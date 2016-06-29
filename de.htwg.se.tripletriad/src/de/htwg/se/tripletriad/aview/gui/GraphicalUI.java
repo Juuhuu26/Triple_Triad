@@ -206,7 +206,4 @@ public class GraphicalUI implements IObserver {
         center.setText(controller.toString());
     }
     
-	public static void startGUI() {
-		new GraphicalUI(controller);
-	}
 }

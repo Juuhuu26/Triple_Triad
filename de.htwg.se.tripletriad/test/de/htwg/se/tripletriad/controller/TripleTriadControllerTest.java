@@ -72,9 +72,6 @@ public class TripleTriadControllerTest {
         
         controller.getWinner();
         assertEquals(controller.getWinner(), "Tie");
-        
-        System.out.println(controller.getPlayer1().getDeck().toString());
-        System.out.println(controller.getPlayer2().getDeck().toString());
         controller.setCard(0, 'A');
         assertEquals(controller.getPlayer1().getDeck().getHand().size(), 8);
         controller.setCard(9, 1);
