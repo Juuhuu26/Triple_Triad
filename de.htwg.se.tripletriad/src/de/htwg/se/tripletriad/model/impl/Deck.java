@@ -29,6 +29,10 @@ public class Deck implements IDeck{
     public void removeCard(int x) {
         hand.remove(x);
     }
+    
+    public void addCard(Card c) {
+        hand.add(c);
+    }
 
     @Override
     public String toString(){
