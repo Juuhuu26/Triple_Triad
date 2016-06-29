@@ -52,28 +52,28 @@ public interface IGamefield {
 	 * compares Card c color with Card c2 color, compares Card c up value with Card c2 down value, 
 	 * then changes the winning card's color
 	 */
-	boolean compareUp(ICard c, ICard c2);
+	abstract boolean compareUp(ICard c, ICard c2);
 	
 	/**
 	 * 
 	 * compares Card c color with Card c2 color, compares Card c down value with Card c2 up value, 
 	 * then the method changes the winning card's color 
 	 */
-	boolean compareDown(ICard c, ICard c2);
+	abstract boolean compareDown(ICard c, ICard c2);
 	
 	/**
 	 * 
 	 * compares Card c color with Card c2 color, compares Card c left value with Card c2 right value, 
 	 * then the method changes the winning card's color 
 	 */
-	boolean compareLeft(ICard c, ICard c2);
+	abstract boolean compareLeft(ICard c, ICard c2);
 	
 	/**
 	 * 
 	 * compares Card c color with Card c2 color, compares Card c right value with Card c2 left value, 
 	 * then the method changes the winning card's color
 	 */
-	boolean compareRight(ICard c, ICard c2);
+	abstract boolean compareRight(ICard c, ICard c2);
 	
 	/**
 	 * 

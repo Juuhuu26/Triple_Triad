@@ -1,4 +1,5 @@
 package de.htwg.se.tripletriad.model;
+
 import de.htwg.se.tripletriad.model.IDeck;
 
 public interface IPlayer {

@@ -1,7 +1,6 @@
 package de.htwg.se.tripletriad.model.impl;
 
 import de.htwg.se.tripletriad.model.ICard;
-
 import de.htwg.se.tripletriad.model.ISinglefield;
 
 public class Singlefield implements ISinglefield {

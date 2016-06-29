@@ -3,8 +3,7 @@ package de.htwg.se.tripletriad.controller.impl;
 import de.htwg.se.tripletriad.controller.ITripleTriadController;
 import de.htwg.se.tripletriad.model.*;
 import de.htwg.se.tripletriad.model.impl.Player;
-import de.htwg.se.tripletriad.model.impl.GamefieldStandard;
-import de.htwg.se.tripletriad.model.impl.GamefieldInverse;
+
 import de.htwg.se.tripletriad.util.collection.Collection;
 import de.htwg.se.tripletriad.util.observer.Observable;
 import java.util.List;
@@ -14,25 +13,25 @@ import java.util.ArrayList;
 
 public class TripleTriadController extends Observable implements ITripleTriadController {
 		
-	
 	private GameStatus st = GameStatus.WELCOME;
 	private String stText = "Quit with q";
 	private IGamefield gameField;
+	@SuppressWarnings("unused")
+	private IGamefieldFactory gFactory;
 	private List<Integer> usedSlot;
-	private IPlayer playerBlue;
-	private IPlayer playerRed;
-	private IPlayer currentP;
+	private IPlayer playerBlue, playerRed, currentP;
 	
 	private int counter = 0;
 	
 	@Inject
-	public TripleTriadController(int strategy){
-	    if(strategy == 1)
-	        gameField = new GamefieldStandard();
-	    else
-	        gameField = new GamefieldInverse();
-		playerBlue = new Player("Player 1, b", 'b');
-		playerRed = new Player("Player 2, r", 'r');
+	public TripleTriadController(IGamefieldFactory gFactory){
+	    this.gFactory = gFactory;
+	    this.gameField = gFactory.creat();
+	    
+	    playerBlue = new Player("Player 1, b", 'b');
+	    playerRed = new Player("Player 2, r", 'r');
+
+	    setPlayer();
 		usedSlot = new ArrayList<>();
 	}
 	

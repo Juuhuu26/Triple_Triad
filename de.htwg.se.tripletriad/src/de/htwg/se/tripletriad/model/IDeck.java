@@ -24,6 +24,10 @@ public interface IDeck {
      */
     void removeCard(int index);
     
+    /**
+     * Add a Card to player's hand
+     * @param Card
+     */
     void addCard(ICard c);
     
     /**
