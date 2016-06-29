@@ -4,15 +4,11 @@ import de.htwg.se.tripletriad.controller.ITripleTriadController;
 import de.htwg.se.tripletriad.model.impl.*;
 import de.htwg.se.tripletriad.util.collection.Collection;
 import de.htwg.se.tripletriad.util.observer.Observable;
-
 import java.util.List;
-
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 
 import java.util.ArrayList;
 
-@Singleton
 public class TripleTriadController extends Observable implements ITripleTriadController {
 		
 	

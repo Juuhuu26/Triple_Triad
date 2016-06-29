@@ -15,6 +15,7 @@ public final class TripleTriad {
 	private static Scanner scanner;
 	private static TextUI tui;
 	private static GraphicalUI gui;
+	private final static int mode = 1;
 	private static TripleTriad instance = null;
 	private static ITripleTriadController controller;
     private static final String NEWLINE = System.getProperty("line.separator");
@@ -48,7 +49,7 @@ public final class TripleTriad {
 
 	public static void main(String[] args) {
 
-		TripleTriad.getInstance(1);
+		TripleTriad.getInstance(mode);
 				
 	    boolean continu = true;
 	    scanner = new Scanner(System.in);

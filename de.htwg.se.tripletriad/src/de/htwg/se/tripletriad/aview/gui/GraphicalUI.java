@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -127,7 +126,7 @@ public class GraphicalUI implements IObserver {
 		
 	    /*---CENTER--------------------------------------------------------------------*/
 	    center = new JTextArea(controller.toString());
-		center.setBorder(BorderFactory.createEmptyBorder(70, 50, 70, 70));
+		center.setBorder(BorderFactory.createEmptyBorder(10, 50, 70, 70));
 		center.setEditable(true);
 		center.setFont(Collection.CENTER_FONT);
 	    /*-----------------------------------------------------------------------------*/
@@ -144,11 +143,9 @@ public class GraphicalUI implements IObserver {
 	    	@Override
 	    	public void actionPerformed(ActionEvent event) {
 	    		String line = pageBottom.getText();
-	    		if (line.startsWith("-q")) {
+	    		if (line.startsWith("-q") || line.startsWith("--quit")) {
 	    			Runtime.getRuntime().halt(0);
-	    		} else if (line.startsWith("--quit")) {
-	    			Runtime.getRuntime().halt(0);
-	    		} else if (line.startsWith("-u")) {
+	    		} else if (line.startsWith("-u") || line.startsWith("--update")) {
 	    			updateStatus();
 	    		} else if (line.matches("[1-5][1-9]")) {
 	                int[] arg = readToArray(line);
