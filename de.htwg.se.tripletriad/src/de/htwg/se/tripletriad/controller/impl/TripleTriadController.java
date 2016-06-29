@@ -27,8 +27,8 @@ public class TripleTriadController extends Observable implements ITripleTriadCon
 	    this.gFactory = gFactory;
 	    this.gameField = gFactory.creat();
 	    
-	    playerRed = new Player("Player 1, b", 'b');
-	    playerBlue = new Player("Player 2, r", 'r');
+	    playerBlue = new Player("Player 1, b", 'b');
+	    playerRed = new Player("Player 2, r", 'r');
 
 	    setPlayer();
 		usedSlot = new ArrayList<>();
