@@ -17,7 +17,6 @@ public final class TripleTriad {
 		
 	private static Scanner scanner;
 	private static TextUI tui;
-//	private final static int mode = 1;
 	private static TripleTriad instance = null;
 	protected static ITripleTriadController controller;
     private static final String NEWLINE = System.getProperty("line.separator");

@@ -31,6 +31,7 @@ public class Deck implements IDeck{
         hand.remove(x);
     }
     
+    @Override
     public void addCard(ICard c) {
         hand.add(c);
     }
