@@ -2,7 +2,7 @@ package de.htwg.se.tripletriad.model;
 
 import java.util.List;
 
-import de.htwg.se.tripletriad.model.impl.Card;
+import de.htwg.se.tripletriad.model.ICard;
 
 public interface IDeck {
 
@@ -13,7 +13,7 @@ public interface IDeck {
      * 
      * @return List of cards
      */
-    List<Card> getHand();
+    List<ICard> getHand();
     
 /* Methods */
     
@@ -24,6 +24,7 @@ public interface IDeck {
      */
     void removeCard(int index);
     
+    void addCard(ICard c);
     
     /**
      * Get player's hand as String

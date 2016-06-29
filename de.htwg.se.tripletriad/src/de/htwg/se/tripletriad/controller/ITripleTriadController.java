@@ -1,7 +1,7 @@
 package de.htwg.se.tripletriad.controller;
 
 import de.htwg.se.tripletriad.controller.impl.GameStatus;
-import de.htwg.se.tripletriad.model.impl.Player;
+import de.htwg.se.tripletriad.model.IPlayer;
 import de.htwg.se.tripletriad.util.observer.IObservable;
 
 public interface ITripleTriadController extends IObservable {
@@ -10,19 +10,19 @@ public interface ITripleTriadController extends IObservable {
 	 * 
 	 * @return: returns the current player 
 	 */
-	Player getPlayer();
+	IPlayer getPlayer();
 	
 	/**
 	 * 
 	 * @return: returns player one with allocated color blue 
 	 */
-	Player getPlayer1();
+	IPlayer getPlayer1();
 	
 	/**
 	 * 
 	 * @return: returns player two with allocated color red 
 	 */
-	Player getPlayer2();
+	IPlayer getPlayer2();
 	
 	/**
 	 * 

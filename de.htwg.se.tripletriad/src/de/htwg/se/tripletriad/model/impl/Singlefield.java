@@ -1,5 +1,7 @@
 package de.htwg.se.tripletriad.model.impl;
 
+import de.htwg.se.tripletriad.model.ICard;
+
 import de.htwg.se.tripletriad.model.ISinglefield;
 
 public class Singlefield implements ISinglefield {
@@ -11,8 +13,8 @@ public class Singlefield implements ISinglefield {
     }
 
     @Override
-    public void setCard(Card card) {
-        this.card = card;
+    public void setCard(ICard card) {
+        this.card = (Card) card;
     }
 
     @Override

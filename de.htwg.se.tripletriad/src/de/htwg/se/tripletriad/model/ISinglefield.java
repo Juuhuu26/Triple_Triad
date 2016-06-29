@@ -1,6 +1,6 @@
 package de.htwg.se.tripletriad.model;
 
-import de.htwg.se.tripletriad.model.impl.Card;
+import de.htwg.se.tripletriad.model.ICard;
 
 public interface ISinglefield {
 	
@@ -8,13 +8,13 @@ public interface ISinglefield {
 	 * 
 	 * sets the current card
 	 */
-	void setCard(Card card);
+	void setCard(ICard card);
 	
 	/**
 	 * 
 	 * @return: returns the current card 
 	 */
-	Card getCard();
+	ICard getCard();
 	
 	/**
 	 * 

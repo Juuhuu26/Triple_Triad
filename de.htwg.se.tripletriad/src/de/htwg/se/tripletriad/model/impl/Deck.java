@@ -1,6 +1,7 @@
 package de.htwg.se.tripletriad.model.impl;
 
 import de.htwg.se.tripletriad.model.IDeck;
+import de.htwg.se.tripletriad.model.ICard;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 public class Deck implements IDeck{
 
     CardCollection cardList = new CardCollection();
-    private List<Card> hand;
+    private List<ICard> hand;
     private static final int MAX_CARD = 5;
 
     public Deck(char c){
@@ -21,7 +22,7 @@ public class Deck implements IDeck{
     }
 
     @Override
-    public List<Card> getHand(){
+    public List<ICard> getHand(){
         return hand;
     }
     
@@ -30,7 +31,7 @@ public class Deck implements IDeck{
         hand.remove(x);
     }
     
-    public void addCard(Card c) {
+    public void addCard(ICard c) {
         hand.add(c);
     }
 

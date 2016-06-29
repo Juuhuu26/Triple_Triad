@@ -1,7 +1,10 @@
 package de.htwg.se.tripletriad.controller.impl;
 
 import de.htwg.se.tripletriad.controller.ITripleTriadController;
-import de.htwg.se.tripletriad.model.impl.*;
+import de.htwg.se.tripletriad.model.*;
+import de.htwg.se.tripletriad.model.impl.Player;
+import de.htwg.se.tripletriad.model.impl.GamefieldStandard;
+import de.htwg.se.tripletriad.model.impl.GamefieldInverse;
 import de.htwg.se.tripletriad.util.collection.Collection;
 import de.htwg.se.tripletriad.util.observer.Observable;
 import java.util.List;
@@ -14,11 +17,11 @@ public class TripleTriadController extends Observable implements ITripleTriadCon
 	
 	private GameStatus st = GameStatus.WELCOME;
 	private String stText = "Quit with q";
-	private Gamefield gameField;
+	private IGamefield gameField;
 	private List<Integer> usedSlot;
-	private Player playerBlue;
-	private Player playerRed;
-	private Player currentP;
+	private IPlayer playerBlue;
+	private IPlayer playerRed;
+	private IPlayer currentP;
 	
 	private int counter = 0;
 	
@@ -34,17 +37,17 @@ public class TripleTriadController extends Observable implements ITripleTriadCon
 	}
 	
 	@Override
-	public Player getPlayer(){
+	public IPlayer getPlayer(){
 		return currentP;
 	}
 	
 	@Override
-	public Player getPlayer1(){
+	public IPlayer getPlayer1(){
 		return playerBlue;
 	}
 	
 	@Override
-	public Player getPlayer2(){
+	public IPlayer getPlayer2(){
 		return playerRed;
 	}
 	
@@ -83,8 +86,7 @@ public class TripleTriadController extends Observable implements ITripleTriadCon
 				stText = Integer.toString(card);
 			} else {
 			    usedSlot.add(pos);
-				Card c = currentP.getDeck().getHand().get(card);
-				int changes = gameField.setCardField(c, pos);
+				int changes = gameField.setCardField(currentP.getDeck().getHand().get(card), pos);
 				currentP.getDeck().removeCard(card);
 				updateStatus(changes);
 				counter++;
