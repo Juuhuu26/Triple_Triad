@@ -22,7 +22,7 @@ import de.htwg.se.tripletriad.util.observer.IObserver;
 
 public class GraphicalUI implements IObserver {
 	
-	public static ITripleTriadController controller;
+	private static ITripleTriadController controller;
 	JFrame menuFrame;
 	JButton startButton;
 	JButton aboutButton;

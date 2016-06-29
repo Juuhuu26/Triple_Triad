@@ -62,7 +62,6 @@ public class TextUI implements IObserver{
     
     public void printTUI() {
     	
-    	Context context = new Context();
     	StatePlayerOne pl1 = new StatePlayerOne();
     	StatePlayerTwo pl2 = new StatePlayerTwo();
     	
@@ -75,9 +74,9 @@ public class TextUI implements IObserver{
 	    LOGGER.info(NEWLINE + "Player 2, r:\t" + controller.getPlayer2().getTotalPoint());
 	    
 	    if (controller.getPlayer().getName() == "Player 1, b") {
-	    	pl1.goPl1(context);
+	    	pl1.goPl1();
 	    } else if (controller.getPlayer().getName() == "Player 2, r") {
-	    	pl2.goPl2(context);
+	    	pl2.goPl2();
 	    }
     }
 }
