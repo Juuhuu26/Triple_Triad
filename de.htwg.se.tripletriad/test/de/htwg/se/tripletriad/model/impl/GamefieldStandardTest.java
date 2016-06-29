@@ -7,7 +7,7 @@ import org.junit.Test;
 import de.htwg.se.tripletriad.model.impl.Card;
 import de.htwg.se.tripletriad.model.impl.Gamefield;
 
-public class GamefieldTest {
+public class GamefieldStandardTest {
     
     private Gamefield gamefield;
     private Card card1, card2, card3, card4,
@@ -15,7 +15,7 @@ public class GamefieldTest {
 
     @Before
     public void setUp() throws Exception {
-        gamefield = new Gamefield();
+        gamefield = new GamefieldStandard();
         card1 = new Card("A", 1, 1, 1, 1);
         card1.setColor('b');
         card2 = new Card("B", 1, 1, 1, 1);

@@ -46,5 +46,12 @@ public class PlayerTest {
 	public void testGetDeck() {
 		assertNotNull(player.getDeck());
 	}
+	
+	@Test
+	public void testAddToDeck() {
+	    Card newC = new Card("new", 1, 1, 1, 1);
+	    player.addToDeck(newC);
+	    assertEquals(player.getDeck().getHand().size(), 6);
+	}
 
 }

@@ -10,7 +10,7 @@ public class StatePlayerOne {
 	private static final Logger LOGGER = LogManager.getLogger(TextUI.class.getName());
 	private static final String NEWLINE = System.getProperty("line.separator");
 	
-	public void goPl1(Context context) {
+	public void goPl1() {
 		LOGGER.info(NEWLINE + "Player 1, it's your turn. Type something:");
 	}
 

@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 import de.htwg.se.tripletriad.controller.ITripleTriadController;
 import de.htwg.se.tripletriad.util.observer.Event;
 import de.htwg.se.tripletriad.util.observer.IObserver;
-import de.htwg.se.tripletriad.util.state.Context;
 import de.htwg.se.tripletriad.util.state.StatePlayerOne;
 import de.htwg.se.tripletriad.util.state.StatePlayerTwo;
 
@@ -62,7 +61,6 @@ public class TextUI implements IObserver{
     
     public void printTUI() {
     	
-    	Context context = new Context();
     	StatePlayerOne pl1 = new StatePlayerOne();
     	StatePlayerTwo pl2 = new StatePlayerTwo();
     	
@@ -75,9 +73,9 @@ public class TextUI implements IObserver{
 	    LOGGER.info(NEWLINE + "Player 2, r:\t" + controller.getPlayer2().getTotalPoint());
 	    
 	    if (controller.getPlayer().getName() == "Player 1, b") {
-	    	pl1.goPl1(context);
+	    	pl1.goPl1();
 	    } else if (controller.getPlayer().getName() == "Player 2, r") {
-	    	pl2.goPl2(context);
+	    	pl2.goPl2();
 	    }
     }
 }
