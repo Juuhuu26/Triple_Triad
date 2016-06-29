@@ -28,10 +28,5 @@ public final class Collection {
     
     public static final String EMPTY_LINE = "\n-------------------------";
     public static final String DECK_LINE = "\n------------ \nDeck:\n\n";
-
-	
-    private Collection() {
-    	
-    }
     
 }

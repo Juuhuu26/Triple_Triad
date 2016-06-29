@@ -195,11 +195,10 @@ public class GraphicalUI implements IObserver {
                 Collection.DECK_LINE + controller.getPlayer2().getDeck().toString());
         pageLeft.setText(controller.getPlayer1().getName() + 
                 Collection.DECK_LINE + controller.getPlayer1().getDeck().toString());
-        pageTop.setText(controller.getPlayer().getName()  + 
-	", it's your turn!"
-	+ Collection.EMPTY_LINE + "\nCurrent Points: \n" + 
-	controller.getPlayer1().getName() + ":\t"+ controller.getPlayer1().getTotalPoint() + "\n" + 
-	controller.getPlayer2().getName() + "\t"+ controller.getPlayer2().getTotalPoint() + Collection.EMPTY_LINE);
+        pageTop.setText(controller.getPlayer().getName()  + ", it's your turn!"
+        		+ Collection.EMPTY_LINE + "\nCurrent Points: \n" + 
+        		controller.getPlayer1().getName() + ":\t"+ controller.getPlayer1().getTotalPoint() + "\n" + 
+        		controller.getPlayer2().getName() + "\t"+ controller.getPlayer2().getTotalPoint() + Collection.EMPTY_LINE);
 	}
 	
     @Override
